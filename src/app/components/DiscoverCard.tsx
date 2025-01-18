@@ -2,10 +2,13 @@
 import Image from "next/image";
 import React, { useState } from "react";
 
+
 interface DiscoverCardProps {
   imgsrc: string;
   title: string;
 }
+
+import rose from "@/../Public/assets/imge/rose.jpg";
 
 const DiscoverCard: React.FC<DiscoverCardProps> = ({ imgsrc, title }) => {
   const [isHovered, setIsHovered] = useState(false);
