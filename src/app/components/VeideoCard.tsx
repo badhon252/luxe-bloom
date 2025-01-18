@@ -27,7 +27,7 @@ const VeideoCard: React.FC = () => {
   };
 
   return (
-    <div className="w-full flex flex-col justify-center items-center bg-gray-100 relative">
+    <div className="w-full  flex flex-col justify-center items-center bg-gray-100 relative">
       <video ref={videoRef} autoPlay loop muted playsInline>
         <source
           src="https://cdn.shopify.com/videos/c/o/v/4050546dbc2b4968a77f2a501ba1fd9e.mp4"
