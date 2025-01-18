@@ -44,6 +44,7 @@ const Discover = () => {
             />
           </div>
         </Flex>
+        <p>delete</p>
       </Container>
     </section>
   );
