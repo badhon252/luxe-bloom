@@ -1,6 +1,10 @@
 import React from "react";
 import Image from "next/image";
+<<<<<<< HEAD
 import grouimag from "@/../Public/imge/group-2.png";
+=======
+import grouimag from "@/../Public/assets/imge/group-2.png";
+>>>>>>> origin/main
 
 const INthePress: React.FC = () => {
   return (

@@ -6,7 +6,11 @@ import Image from 'next/image'
 
 const Navbar = () => {
   return (
+<<<<<<< HEAD
     <nav className='bg-[#ECE7E3] py-3 sticky  top-0 z-50'>
+=======
+    <nav className='bg-[#ECE7E3] py-3 top-0 z-50'>
+>>>>>>> origin/main
         <Container>
             <Flex className='justify-between'>
                 <div>
@@ -31,7 +35,11 @@ const Navbar = () => {
             <Flex className='justify-center mt-3'>
                 <ul className='flex gap-[200px] cursor-pointer '>
                 <li className='text-[10px] text-[#000000] font-normal leading-[11px] tracking-[1.4px] uppercase hover:underline duration-300'>Flowers</li>
+<<<<<<< HEAD
                 <li className='text-[10px] text-[#000000] font-normal leading-[11px] tracking-[1.4px] uppercase hover:underline duration-300'>Valentine's Day</li>
+=======
+                <li className='text-[10px] text-[#000000] font-normal leading-[11px] tracking-[1.4px] uppercase hover:underline duration-300'>Valentine&apos;s Day</li>
+>>>>>>> origin/main
                 <li className='text-[10px] text-[#000000] font-normal leading-[11px] tracking-[1.4px] uppercase hover:underline duration-300'>Gifts</li>
                 <li className='text-[10px] text-[#000000] font-normal leading-[11px] tracking-[1.4px] uppercase hover:underline duration-300'>Explore</li>
                 </ul>

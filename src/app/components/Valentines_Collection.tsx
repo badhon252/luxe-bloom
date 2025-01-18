@@ -1,6 +1,9 @@
 import React from "react";
 import Section_Heading from "./Section_Heading";
+<<<<<<< HEAD
 import Flex from "./Flex";
+=======
+>>>>>>> origin/main
 import Valentine_Card from "./Valentine_Card";
 import Container from "./Container";
 import {

@@ -1,8 +1,13 @@
 'use client';
 import Image from "next/image";
 import React, { useState } from "react";
+<<<<<<< HEAD
 import rose from "@/../Public/imge/rose.jpg";
 import hoverImage from "@/../Public/imge/hover.jpg";
+=======
+import rose from "@/../Public/assets/imge/rose.jpg";
+import hoverImage from "@/../Public/assets/imge/hover.jpg";
+>>>>>>> origin/main
 import Flex from "./Flex";
 import { Heart } from "lucide-react";
 
@@ -18,7 +23,11 @@ const Valentine_Card = () => {
       {/* Top Label */}
       <div className="flex items-center gap-x-[10px] absolute top-5 left-0">
         <p className="text-[9px] text-[#000000] font-normal leading-[11px] tracking-[1.2px] uppercase bg-[#E3CFCF] py-2 px-3">
+<<<<<<< HEAD
           valentine's exclusive
+=======
+          valentine&apost;s exclusive
+>>>>>>> origin/main
         </p>
         <Heart size={20} color="#757575" />
       </div>
