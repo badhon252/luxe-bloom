@@ -8,7 +8,6 @@ interface DiscoverCardProps {
   title: string;
 }
 
-import rose from "@/../Public/assets/imge/rose.jpg";
 
 const DiscoverCard: React.FC<DiscoverCardProps> = ({ imgsrc, title }) => {
   const [isHovered, setIsHovered] = useState(false);
