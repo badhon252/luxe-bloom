@@ -2,7 +2,7 @@ import React from "react";
 
 const Who_we_are = () => {
   return (
-    <div className="relative overflow-hidden mb-10">
+    <div className="relative overflow-hidden ">
       <video
         className="absolute top-0 left-0 w-full h-full object-cover"
         autoPlay
