@@ -6,7 +6,7 @@ import DiscoverCard from "./DiscoverCard";
 
 const Discover = () => {
   return (
-    <section>
+    <section >
       <Container>
         <div className="flex justify-center mt-[74px]">
           <Section_Heading
@@ -14,34 +14,37 @@ const Discover = () => {
             subheading=""
           />
         </div>
-        <Flex className="mt-7">
-          <div className="w-[25%]">
+        <Flex className="mt-7 flex-wrap md:flex-nowrap ">
+          <div className="w-full md:w-[25%]">
             {/* Passing a local image from the public directory */}
             <DiscoverCard
-              imgsrc="/imge/hover_rose.jpg" // This is the correct path for a public folder image
+              imgsrc="/imge/hover_rose.jpg" // Local image URL
               title="Rose"
             />
           </div>
-          <div className="w-[25%]">
-            {/* Example of passing another local or remote image */}
+          <div className="w-full md:w-[25%]">
+            {/* Passing an image URL */}
             <DiscoverCard
-                imgsrc="/imge/hover_rose.jpg" 
+              imgsrc="https://cdn.shopify.com/videos/c/o/v/4050546dbc2b4968a77f2a501ba1fd9e.mp4" // External image URL
               title="Lily"
             />
           </div>
-          <div className="w-[25%]">
+          <div className="w-full md:w-[25%]">
+            {/* Passing a video URL */}
             <DiscoverCard
-               imgsrc="/imge/hover_rose.jpg" 
+              imgsrc="/imge/hover_rose.jpg" // External video URL
               title="Tulip"
             />
           </div>
-          <div className="w-[25%]">
+          <div className="w-full md:w-[25%]">
+            {/* Another local image */}
             <DiscoverCard
-               imgsrc="/imge/hover_rose.jpg" 
+              imgsrc="/imge/hover_rose.jpg" // Local image URL
               title="Daisy"
             />
           </div>
         </Flex>
+        
       </Container>
     </section>
   );
