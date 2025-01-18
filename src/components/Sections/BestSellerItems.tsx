@@ -8,15 +8,13 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import Section_Heading from "@/app/components/Section_Heading";
-import Container from "@/app/components/Container";
-import ProductCard from "@/app/components/Valentine_Card";
+import Section_Heading from "@/components/Sections/Section_Heading";
+import ProductCard from "@/components/cards/Valentine_Card";
 
 const BestSellerItems = () => {
   return (
-    <section className=" ">
-      <Container>
-        <div className="mt-[55px] relative">
+    <section className="">
+      <div className="mt-[55px] relative container mx-auto">
           <Section_Heading
             heading="Cherished Best Sellers"
             subheading="Timeless gifts for unforgettable moments"
@@ -48,8 +46,7 @@ const BestSellerItems = () => {
             <CarouselPrevious className="absolute top-[18px] md:top-[-10px] left-5 md:left-[620px]   lg:left-[1750px]" />
             <CarouselNext className="absolute top-[18px] md:top-[-10px] right-5" />
           </Carousel>
-        </div>
-      </Container>
+      </div>
     </section>
   );
 };

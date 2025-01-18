@@ -1,4 +1,4 @@
-import Hero from "@/app/components/Hero";
+import Hero from "@/components/hero-section/Hero";
 import { Navbar } from "@/components/navbar/header-navbar";
 import { PromotionalCarousel } from "../Sections/PromotionalCarousel";
 

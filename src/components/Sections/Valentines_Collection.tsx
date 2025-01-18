@@ -1,8 +1,7 @@
 import React from "react";
 import { Heart } from "lucide-react";
 import Section_Heading from "./Section_Heading";
-import Valentine_Card from "./Valentine_Card";
-import Container from "./Container";
+import Valentine_Card from "@/components/cards/Valentine_Card";
 import {
   Carousel,
   CarouselContent,
@@ -13,8 +12,7 @@ import {
 
 const Valentines_Collection = () => {
   return (
-    <section className=" ">
-      <Container>
+    <section className="container mx-auto">
         <div className="mt-[55px] relative">
           <Section_Heading
             heading="The Valentine’s Collection"
@@ -45,7 +43,6 @@ const Valentines_Collection = () => {
             <CarouselNext className="absolute top-[18px] md:top-[-10px] right-5" />
           </Carousel>
         </div>
-      </Container>
     </section>
   );
 };

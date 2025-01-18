@@ -1,16 +1,13 @@
 import React from "react";
-import Container from "./Container";
-import Flex from "./Flex";
-import VeideoCard from "./VeideoCard";
+import VeideoCard from "./cards/VeideoCard";
 import Image from "next/image";
-import blur from "@/../Public/assets/imge/blur.jpg";
+import blur from "@/../Public/assets/image/blur.jpg";
 import Heading from "./Heading";
 
 const Parisian_Hat_Boxes = () => {
   return (
-    <section className="mt-[65px]">
-      <Container>
-        <Flex className="justify-between flex-col md:flex-row">
+    <section className="mt-[65px] container mx-auto">
+      <div className="flex justify-between flex-col md:flex-row">
           <div className="w-full md:w-[48%]">
             <VeideoCard />
             <div className="mt-3">
@@ -35,8 +32,7 @@ const Parisian_Hat_Boxes = () => {
               />
             </div>
           </div>
-        </Flex>
-      </Container>
+      </div>
     </section>
   );
 };
