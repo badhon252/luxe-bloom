@@ -4,9 +4,8 @@ import React, { useState } from "react";
 import rose from "@/../Public/assets/imge/rose.jpg";
 import hoverImage from "@/../Public/assets/imge/hover.jpg";
 import Flex from "./Flex";
-import { Heart } from "lucide-react";
 
-const Valentine_Card = () => {
+const ProductCard = ({children}: {children: React.ReactNode}) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -15,13 +14,7 @@ const Valentine_Card = () => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      {/* Top Label */}
-      <div className="flex items-center gap-x-[10px] absolute top-5 left-0">
-        <p className="text-[9px] text-[#000000] font-normal leading-[11px] tracking-[1.2px] uppercase bg-[#E3CFCF] py-2 px-3">
-          valentine&apost;s exclusive
-        </p>
-        <Heart size={20} color="#757575" />
-      </div>
+      {children}
 
       {/* Product Image */}
       <div className="">
@@ -68,4 +61,4 @@ const Valentine_Card = () => {
   );
 };
 
-export default Valentine_Card;
+export default ProductCard;

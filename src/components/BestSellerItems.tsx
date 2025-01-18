@@ -1,8 +1,6 @@
 import React from "react";
-import { Heart } from "lucide-react";
-import Section_Heading from "./Section_Heading";
-import Valentine_Card from "./Valentine_Card";
-import Container from "./Container";
+import { Heart, Star } from "lucide-react";
+
 import {
   Carousel,
   CarouselContent,
@@ -10,15 +8,18 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Section_Heading from "@/app/components/Section_Heading";
+import Container from "@/app/components/Container";
+import ProductCard from "@/app/components/Valentine_Card";
 
-const Valentines_Collection = () => {
+const BestSellerItems = () => {
   return (
     <section className=" ">
       <Container>
         <div className="mt-[55px] relative">
           <Section_Heading
-            heading="The Valentine’s Collection"
-            subheading="Inspired by Cupid himself"
+            heading="Cherished Best Sellers"
+            subheading="Timeless gifts for unforgettable moments"
           />
           <Carousel
             opts={{
@@ -29,14 +30,17 @@ const Valentines_Collection = () => {
               {Array.from({ length: 10 }).map((_, index) => (
                 <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                   <div className="mt-10 md:mt-6">
-                    <Valentine_Card>
-                      <div className="flex items-center gap-x-[10px] absolute top-5 left-0">
-                        <p className="text-[9px] text-[#000000] font-normal leading-[11px] tracking-[1.2px] uppercase bg-[#E3CFCF] py-2 px-3">
-                          valentine&apost;s exclusive
-                        </p>
-                        <Heart size={20} color="#757575" />
+                    <ProductCard>
+                      <div className="flex items-center gap-x-[10px] absolute top-5 left-5 right-5 *:text-xs ">
+                        <div className="w-full">
+                          <Heart  size={12} color="#757575" />
+                        </div>
+                        <div className="flex justify-between items-center gap-1">
+                          <Star size={12} color="#757575" />
+                          <span>4.5</span>
+                        </div>
                       </div>
-                    </Valentine_Card>
+                    </ProductCard>
                   </div>
                 </CarouselItem>
               ))}
@@ -50,4 +54,4 @@ const Valentines_Collection = () => {
   );
 };
 
-export default Valentines_Collection;
+export default BestSellerItems;

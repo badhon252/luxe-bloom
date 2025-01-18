@@ -10,7 +10,6 @@ const page = () => {
   return (
     <div>
       <HeroSection/>
-
       <INthePress/>
       <Valentines_Collection/>
       <Parisian_Hat_Boxes/>
