@@ -1,8 +1,7 @@
 "use client";
 import Image from "next/image";
 import React, { useState } from "react";
-import rose from "@/../Public/imge/rose.jpg";
-
+import rose from "@/../Public/assets/imge/rose.jpg";
 
 const DiscoverCard = () => {
   const [isHovered, setIsHovered] = useState(false);
