@@ -6,6 +6,7 @@ import Discover from './components/Discover'
 import HeroSection from '@/components/hero-section/hero-section'
 import Who_we_are from '@/components/Sections/Who_we_are'
 import BestSellerItems from '@/components/Sections/BestSellerItems'
+import LovedByIcon from '@/components/Sections/Testimonials'
 
 
 const page = () => {
@@ -18,6 +19,7 @@ const page = () => {
       <Discover/>
       <BestSellerItems/>
       <Who_we_are/>
+      <LovedByIcon/>
     </div>
   )
 }
