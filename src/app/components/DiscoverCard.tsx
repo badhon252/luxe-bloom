@@ -10,7 +10,7 @@ interface DiscoverCardProps {
 const DiscoverCard: React.FC<DiscoverCardProps> = ({ imgsrc, title }) => {
   const [isHovered, setIsHovered] = useState(false);
 
-  // Function to check if the source is a video URL
+  
   const isVideo = (url: string) => {
     return url.endsWith(".mp4") || url.endsWith(".webm") || url.endsWith(".ogg");
   };
@@ -39,13 +39,15 @@ const DiscoverCard: React.FC<DiscoverCardProps> = ({ imgsrc, title }) => {
             className="object-cover"
           />
         ) : (
-          <Image
+        
+            <Image
             src={imgsrc}
             alt={title}
             width={639}
             height={639}
-            className="object-cover"
+           className="object-cover w-full h-full"
           />
+       
         )}
       </div>
 
