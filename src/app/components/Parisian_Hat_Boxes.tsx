@@ -3,7 +3,8 @@ import Container from "./Container";
 import Flex from "./Flex";
 import VeideoCard from "./VeideoCard";
 import Image from "next/image";
-import blur from "@/../Public/imge/blur.jpg";
+import blur from "@/../Public/assets/imge/blur.jpg";
+
 import Heading from "./Heading";
 
 const Parisian_Hat_Boxes = () => {
