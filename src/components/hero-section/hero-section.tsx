@@ -1,6 +1,6 @@
 import Hero from "@/app/components/Hero";
 import { Navbar } from "@/components/navbar/header-navbar";
-import { PromotionalCarousel } from "../PromotionalCarousel";
+import { PromotionalCarousel } from "../Sections/PromotionalCarousel";
 
 export default function HeroSection() {
   return (

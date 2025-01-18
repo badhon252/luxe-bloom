@@ -5,6 +5,7 @@ import Parisian_Hat_Boxes from './components/Parisian_Hat_Boxes'
 import Discover from './components/Discover'
 import HeroSection from '@/components/hero-section/hero-section'
 import Who_we_are from '@/components/Sections/Who_we_are'
+import BestSellerItems from '@/components/Sections/BestSellerItems'
 
 
 const page = () => {
@@ -15,6 +16,7 @@ const page = () => {
       <Valentines_Collection/>
       <Parisian_Hat_Boxes/>
       <Discover/>
+      <BestSellerItems/>
       <Who_we_are/>
     </div>
   )
