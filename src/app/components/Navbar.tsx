@@ -6,7 +6,9 @@ import Image from 'next/image'
 
 const Navbar = () => {
   return (
-    <nav className='bg-[#ECE7E3] py-3 top-0 z-50'>
+
+    <nav className='bg-[#ECE7E3] py-3 sticky  top-0 z-50'>
+
         <Container>
             <Flex className='justify-between'>
                 <div>

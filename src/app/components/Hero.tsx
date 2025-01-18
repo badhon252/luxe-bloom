@@ -1,3 +1,7 @@
+import Image from 'next/image';
+import React from 'react';
+import heroimg from '@/../Public/imge/hero.jpg';
+
 const Hero = () => {
   return (
     <section className="h-screen bg-[url('https://dailyblooms.com.au/cdn/shop/files/All-blooms-01.jpg?v=1694341071&width=3008')] bg-cover bg-center">

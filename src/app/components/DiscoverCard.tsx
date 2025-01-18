@@ -3,10 +3,9 @@ import Image from "next/image";
 import React, { useState } from "react";
 import rose from "@/../Public/assets/imge/rose.jpg";
 
-
 const DiscoverCard = () => {
   const [isHovered, setIsHovered] = useState(false);
-console.log(isHovered)
+
   return (
     <div
       className="w-full border-[1px] border-[#E6E6E6] relative group overflow-hidden"
