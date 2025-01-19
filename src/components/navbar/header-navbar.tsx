@@ -22,7 +22,7 @@ export function Navbar() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${
-        scrolled ? "bg-[rgb(193,178,215)]/90 backdrop-blur-sm shadow-sm" : "bg-transparent"
+        scrolled ? "bg-white/90 backdrop-blur-sm shadow-sm" : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4">
@@ -40,8 +40,9 @@ export function Navbar() {
 
           {/* Center Logo */}
           <div className="flex-1 md:flex-none text-center">
-            <Link href="/" className="text-2xl font-serif tracking-wider">
+            <Link href="/" className="text-3xl font-serif tracking-wider font-extrabold">
              {/* <Image src={logo} alt="Logo" width={100} height={100} /> */}
+             LUXE BLOOM
             </Link>
           </div>
 

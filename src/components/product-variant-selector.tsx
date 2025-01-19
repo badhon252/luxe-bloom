@@ -1,59 +1,72 @@
 "use client"
 
+import { useState } from "react"
+import Image from "next/image"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
+import { ProductVariant, ProductSize } from "@/types/product"
 
 interface ProductVariantSelectorProps {
-  materials: string
-  colors:  { value: string; name: string; meaning: string }[]
-  selectedMaterial: string
-  selectedColor: string
-  onMaterialChange: (material: string) => void
-  onColorChange: (color: string) => void
-  viewMode: "grid" | "list"
+  variants: ProductVariant[];
+  sizes: ProductSize[];
+  selectedVariant: ProductVariant;
+  selectedSize: ProductSize;
+  onVariantChange: (variant: ProductVariant) => void;
+  onSizeChange: (size: ProductSize) => void;
 }
 
 export function ProductVariantSelector({
-  // materials,
-  colors,
-  // selectedMaterial,
-  selectedColor,
-  // onMaterialChange,
-  onColorChange,
-  viewMode,
+  variants = [],
+  sizes = [],
+  selectedVariant,
+  selectedSize,
+  onVariantChange,
+  onSizeChange,
 }: ProductVariantSelectorProps) {
+  const [viewMode, setViewMode] = useState<"grid" | "list">("grid")
+
   return (
     <div className="space-y-6">
-      {/* Material Selection */}
-      {/* <div className="space-y-4">
+      {/* Size Selection */}
+      <div className="space-y-4">
         <div className="text-sm uppercase tracking-wider text-gray-500">
-          MATERIAL:
-          <span className="ml-2 text-gray-900">{selectedMaterial}</span>
+          COUNT:
+          <span className="ml-2 text-gray-900">{selectedSize.name}</span>
         </div>
         <div className="flex gap-4">
-          {materials.map((material ) => (
+          {sizes.length > 0 ? sizes.map((size) => (
             <button
-              key={material.value}
-              onClick={() => onMaterialChange(material.value)}
+              key={size.id}
+              onClick={() => onSizeChange(size)}
               className={cn(
-                "border rounded-full p-4 w-16 h-16 flex items-center justify-center",
-                selectedMaterial === material.value
+                "border rounded-lg p-4 text-center",
+                selectedSize.id === size.id
                   ? "border-gray-900"
                   : "border-gray-200"
               )}
             >
-              <div className="w-12 h-12 bg-gray-100 rounded-full" />
+              <Image
+                src={size.image || "/placeholder.svg"}
+                alt={size.name}
+                width={60}
+                height={60}
+                className="mx-auto mb-2"
+              />
+              <div className="text-sm">{size.name}</div>
             </button>
-          ))}
+          )) : <div className="text-gray-500">No sizes available</div>}
         </div>
-      </div> */}
+      </div>
 
       {/* Color Selection */}
       <div className="space-y-4">
         <div className="flex items-center justify-between">
           <div className="text-sm uppercase tracking-wider text-gray-500">
             COLOR:
-            <span className="ml-2 text-gray-900">{selectedColor}</span>
+            <span className="ml-2 text-gray-900">
+              {selectedVariant.color}
+              {!selectedVariant.inStock && " (NO STOCK)"}
+            </span>
           </div>
           <div className="flex gap-2">
             <Button
@@ -63,7 +76,7 @@ export function ProductVariantSelector({
                 "text-xs",
                 viewMode === "grid" && "bg-gray-100"
               )}
-              onClick={() => {console.log("Grid")}}	 
+              onClick={() => setViewMode("grid")}
             >
               Grid
             </Button>
@@ -74,7 +87,7 @@ export function ProductVariantSelector({
                 "text-xs",
                 viewMode === "list" && "bg-gray-100"
               )}
-              onClick={() => {}}
+              onClick={() => setViewMode("list")}
             >
               List
             </Button>
@@ -86,39 +99,41 @@ export function ProductVariantSelector({
             viewMode === "grid" ? "grid-cols-6" : "grid-cols-1"
           )}
         >
-          {colors.map((color) => (
+          {variants.length > 0 ? variants.map((variant) => (
             <button
-              key={color.value}
-              onClick={() => onColorChange(color.value)}
+              key={variant.id}
+              onClick={() => onVariantChange(variant)}
               className={cn(
                 "flex items-center gap-4",
                 viewMode === "list" && "border rounded-lg p-4",
-                selectedColor === color.value &&
+                selectedVariant.id === variant.id &&
                   viewMode === "list" &&
                   "border-gray-900"
               )}
+              disabled={!variant.inStock}
             >
               <div
                 className={cn(
                   "w-12 h-12 rounded-full border flex-shrink-0",
-                  selectedColor === color.value && viewMode === "grid"
+                  selectedVariant.id === variant.id && viewMode === "grid"
                     ? "border-gray-900"
-                    : "border-gray-200"
+                    : "border-gray-200",
+                  !variant.inStock && "opacity-50"
                 )}
               >
                 <div
                   className="w-full h-full rounded-full"
-                  style={{ backgroundColor: color.value }}
+                  style={{ backgroundColor: variant.colorCode }}
                 />
               </div>
               {viewMode === "list" && (
                 <div className="text-left">
-                  <div className="font-medium">{color.name}</div>
-                  <div className="text-sm text-gray-500">{color.meaning}</div>
+                  <div className="font-medium">{variant.color}</div>
+                  <div className="text-sm text-gray-500">{variant.meaning}</div>
                 </div>
               )}
             </button>
-          ))}
+          )) : <div className="text-gray-500">No variants available</div>}
         </div>
       </div>
     </div>

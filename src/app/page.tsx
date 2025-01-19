@@ -6,7 +6,7 @@ import Discover from '../components/Sections/Discover'
 import HeroSection from '@/components/hero-section/hero-section'
 import Who_we_are from '@/components/Sections/Who_we_are'
 import BestSellerItems from '@/components/Sections/BestSellerItems'
-import LovedByIcon from '@/components/Sections/Testimonials'
+import TestimonialCarousel from '@/components/TestimonialCarousel'
 
 
 const page = () => {
@@ -19,7 +19,7 @@ const page = () => {
       <Discover/>
       <BestSellerItems/>
       <Who_we_are/>
-      <LovedByIcon/>
+      <TestimonialCarousel/>
     </div>
   )
 }

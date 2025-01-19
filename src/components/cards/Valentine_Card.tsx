@@ -23,6 +23,7 @@ const ProductCard = ({children}: {children: React.ReactNode}) => {
           alt="rose"
           width={639}
           height={639}
+          className="transition-transform duration-300 "
         />
       </div>
 

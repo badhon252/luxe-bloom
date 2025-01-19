@@ -1,4 +1,3 @@
-import Flex from "@/app/components/Flex";
 import Image from "next/image";
 import React from "react";
 import { FaStar } from "react-icons/fa";
@@ -28,8 +27,8 @@ const LoveByIconCard = () => {
 
       {/* Quote */}
       <p className="text-sm text-[#000000] font-normal leading-[19px] mt-[6px]">
-        "Thank you for your kindness and generosity with your amazing flowers!
-        Forever fan!"
+        &quot;Thank you for your kindness and generosity with your amazing flowers!
+        Forever fan!&quot;
       </p>
 
       {/* Stars */}
@@ -40,7 +39,7 @@ const LoveByIconCard = () => {
           </span>
         ))}
       </div>
-      <Flex className="items-center  gap-x-4 mt-4">
+      <div className="flex items-center  gap-x-4 mt-4">
         <div>
             <Image
             src="/assets/imge/testimonial.png"
@@ -56,7 +55,7 @@ const LoveByIconCard = () => {
             </div>
             <h6>Handcarved Marble / White Roses</h6>
         </div>
-      </Flex>
+      </div>
     </div>
   );
 };

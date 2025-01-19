@@ -1,123 +1,221 @@
-"use client"
-import { useState } from "react"
-import Link from "next/link"
-import { ProductImageGallery } from "@/components/product/product-image-gallery"
-import { ProductVariantSelector } from "@/components/product/product-variant-selector"
-import { Button } from "@/components/ui/button"
+"use client";
 
-const product = {
-  name: "AMPHORA PORCELAIN VASE",
-  price: 429,
-  description: "12 Long-Stem Eternity Roses",
-  materials: [
-    { name: "Black Porcelain", value: "black-porcelain" },
-    { name: "Porcelain", value: "porcelain" },
-  ],
-  colors: [
+import { useState } from "react";
+import Link from "next/link";
+import { Star } from "lucide-react";
+import { ProductGallery } from "@/components/product/product-gallery";
+import { ProductVariantSelector } from "@/components/product-variant-selector";
+import { StockNotification } from "@/components/stock-notification";
+import { Button } from "@/components/ui/button";
+import { Product, ProductVariant, ProductSize } from "@/types/product";
+
+// Mock product data
+const product: Product = {
+  id: "aphrodite-vase",
+  name: "APHRODITE PORCELAIN VASE",
+  description: "Eternity Flower Arrangement",
+  variants: [
     {
-      name: "Red",
-      value: "#FF0000",
+      id: "red",
+      color: "Red",
+      colorCode: "#FF0000",
       meaning: "Universal Symbol of Love, Romance, Beauty",
+      inStock: true,
+      images: [
+        {
+          url: "/assets/image/product6.webp",
+          color: "red",
+          alt: "Red roses in vase",
+        },
+        {
+          url: "/assets/image/product2.webp",
+          color: "red",
+          alt: "Red roses in vase",
+        },
+        {
+          url: "/assets/image/product9.webp",
+          color: "red",
+          alt: "Red roses in vase",
+        },
+      ],
     },
+
     {
-      name: "Pure White",
-      value: "#FFFFFF",
+      id: "Burgundy",
+      color: "Burgundy",
+      colorCode: "#350707",
       meaning: "Purity, Innocence, Honor",
+      inStock: true,
+      images: [
+        {
+          url: "/assets/image/product1.webp",
+          color: "burgundy",
+          alt: "Burgundy roses in vase",
+        },
+        {
+          url: "/assets/image/product7.webp",
+          color: "burgundy",
+          alt: "Burgundy roses in vase",
+        },
+        {
+          url: "/assets/image/product8.webp",
+          color: "burgundy",
+          alt: "Burgundy roses in vase",
+        },
+      ],
     },
+
     {
-      name: "Blush",
-      value: "#FFE4E1",
-      meaning: "Appreciation, Elegance, Gratefulness",
+      id: "Pink",
+      color: "Pink",
+      colorCode: "#ff69da",
+      meaning: "Universal Symbol of Love, Romance, Beauty",
+      inStock: true,
+      images: [
+        {
+          url: "/assets/image/product5.webp",
+          color: "pink",
+          alt: "Pink roses in vase",
+        },
+        {
+          url: "/assets/image/product4.webp",
+          color: "pink",
+          alt: "Pink roses in vase",
+        },
+        {
+          url: "/assets/image/product8.webp",
+          color: "pink",
+          alt: "Pink roses in vase",
+        },
+      ],
     },
+
     {
-      name: "Pink",
-      value: "#FFC0CB",
+      id: "Pearl",
+      color: "Pearl",
+      colorCode: "#f6e7d2",
       meaning: "Femininity, Grace, Thoughtfulness",
-    },
-    {
-      name: "Burgundy",
-      value: "#800020",
-      meaning: "Commitment, Passion, Purity",
-    },
-    {
-      name: "Black",
-      value: "#000000",
-      meaning: "Elegance, Mystery, Power",
+      inStock: true,
+      images: [
+        {
+          url: "/assets/image/product9.webp",
+          color: "pearl",
+          alt: "Pearl roses in vase",
+        },
+        {
+          url: "/assets/image/product7.webp",
+          color: "pearl",
+          alt: "Pearl roses in vase",
+        },
+        {
+          url: "/assets/image/product8.webp",
+          color: "pearl",
+          alt: "Pearl roses in vase",
+        },
+      ],
     },
   ],
-  images: [
-    "/assets/image/product1.webp",
-    "/assets/image/product2.webp",
-    "/assets/image/product3.jpg",
-    "/assets/image/product4.webp",
-    "/assets/image/product5.webp",
+  sizes: [
+    {
+      id: "one-dozen",
+      name: "One Dozen",
+      count: 12,
+      price: 399,
+      image: "/assets/image/rose.jpg",
+    },
+    {
+      id: "two-dozen",
+      name: "Two Dozen",
+      count: 24,
+      price: 698,
+      image: "/assets/image/red_46.webp",
+    },
   ],
-}
+  reviews: {
+    count: 47,
+    rating: 5,
+  },
+};
 
 export default function ProductPage() {
-  const [selectedMaterial, setSelectedMaterial] = useState(
-    product.materials[0].value
-  )
-  const [selectedColor, setSelectedColor] = useState(product.colors[0].name)
-  
-  const [viewMode, setViewMode] = useState<"grid" | "list">("grid")
+  const [selectedVariant, setSelectedVariant] = useState<ProductVariant>(
+    product.variants?.[0] || ({} as ProductVariant)
+  );
+  const [selectedSize, setSelectedSize] = useState<ProductSize>(
+    product.sizes?.[0] || ({} as ProductSize)
+  );
 
-  // const handleMaterialChange = (event: React.ChangeEvent<HTMLSelectElement>) => { 
-  //   setSelectedMaterial(event.target.value)
-  // }
-  // const handleColorChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-  //   setSelectedColor(event.target.value)
-  // }
-  // const handleViewModeChange = (mode: "grid" | "list") => {
-  //   setViewMode(mode)
-  // }
-  // const handleAddToCart = () => {
-  //   // Add the selected product to the cart
-  // } 
-  // const handleBuyNow = () => {
-  //   // Add the selected product to the cart
-  // }
-  // const handleAddToWishlist = () => {
-  //   // Add the selected product to the wishlist
-  // }
+  const allImages = product.variants?.flatMap((v) => v.images || []) || [];
+
   return (
-    <div className="container mx-auto px-4 py-8 min-h-screen">
-      <div className="grid md:grid-cols-2 gap-8 justify-center">
-        <ProductImageGallery images={product.images} />
-        
-        <div className="space-y-6">
+    <div className="container mx-auto px-4 py-8">
+      <div className="flex gap-8 items-center justify-center">
+        <div className="flex-2">
+          
+        <ProductGallery
+          images={allImages}
+          currentColor={selectedVariant?.color || ""}
+        />
+        </div>
+
+        <div className="space-y-6 flex-1">
           <div className="space-y-2">
             <h1 className="text-4xl font-light tracking-wider">
               {product.name}
             </h1>
-            <div className="flex items-center gap-2">
-              <span className="text-xl">${product.price}</span>
-              <span className="text-gray-600">•</span>
-              <span className="text-gray-600">{product.description}</span>
+            <div className="flex items-center gap-4">
+              <div className="flex items-center gap-2">
+                <span className="text-xl">${selectedSize.price}</span>
+                <span className="text-gray-600">•</span>
+                <span className="text-gray-600">
+                  {selectedSize.count} Long-Stem {product.description}
+                </span>
+              </div>
               <Link href="#" className="text-gray-600 underline">
                 Learn More
+              </Link>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="flex">
+                {[...Array(5)].map((_, i) => (
+                  <Star
+                    key={i}
+                    className="w-4 h-4 fill-yellow-400 text-yellow-400"
+                  />
+                ))}
+              </div>
+              <Link href="#reviews" className="text-sm text-gray-600 underline">
+                {product.reviews.count} Reviews
               </Link>
             </div>
           </div>
 
           <ProductVariantSelector
-            materials={product.materials}
-            colors={product.colors}
-            selectedMaterial={selectedMaterial}
-            selectedColor={selectedColor}
-            onMaterialChange={setSelectedMaterial}
-            onColorChange={setSelectedColor}
-            viewMode={viewMode}
+            variants={product.variants || []}
+            sizes={product.sizes || []}
+            selectedVariant={selectedVariant}
+            selectedSize={selectedSize}
+            onVariantChange={setSelectedVariant}
+            onSizeChange={setSelectedSize}
           />
 
-          <Button className="w-full bg-black text-white hover:bg-gray-900">
-            ADD TO CART
-          </Button>
-
-          <div className="text-center text-sm text-gray-600">
-            or 4 interest-free payments of $107.25 USD with{" "}
-            <span className="font-semibold">clearpay</span>
-          </div>
+          {selectedVariant.inStock ? (
+            <>
+              <Button className="w-full bg-black text-white hover:bg-gray-900">
+                ADD TO CART
+              </Button>
+              <div className="text-center text-sm text-gray-600">
+                or 4 interest-free payments of $
+                {(selectedSize.price / 4).toFixed(2)} USD with{" "}
+                <span className="font-semibold">clearpay</span>
+              </div>
+            </>
+          ) : (
+            <StockNotification
+              productName={product.name}
+              variant={selectedVariant.color}
+            />
+          )}
 
           <div className="border rounded-lg p-4 text-center">
             <div className="uppercase text-sm tracking-wider mb-2">
@@ -130,6 +228,5 @@ export default function ProductPage() {
         </div>
       </div>
     </div>
-  )
+  );
 }
-

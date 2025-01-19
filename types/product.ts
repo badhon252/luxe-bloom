@@ -1,20 +1,16 @@
-// product.ts
 export interface ProductImage {
   url: string;
   color: string;
   alt: string;
 }
 
-
-
 export interface ProductVariant {
   id: string;
   color: string;
-  colorCode: string; // Optional: For styling
+  colorCode: string;
   meaning: string;
   inStock: boolean;
   images: ProductImage[];
-  
 }
 
 export interface ProductSize {
@@ -36,3 +32,4 @@ export interface Product {
     rating: number;
   };
 }
+
