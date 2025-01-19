@@ -1,13 +1,12 @@
 import React from "react";
-import Container from "./Container";
 import Section_Heading from "./Section_Heading";
-import Flex from "./Flex";
-import DiscoverCard from "./DiscoverCard";
+import Flex from "../Flex";
+import DiscoverCard from "../cards/DiscoverCard";
 
 const Discover = () => {
   return (
-    <section >
-      <Container>
+    <section className="container mx-auto" >
+      <>
         <div className="flex justify-center mt-[74px]">
           <Section_Heading
             heading="Discover the world of Luxe Bloom"
@@ -45,7 +44,7 @@ const Discover = () => {
           </div>
         </Flex>
         
-      </Container>
+      </>
     </section>
   );
 };

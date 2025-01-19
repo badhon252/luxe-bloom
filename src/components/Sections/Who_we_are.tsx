@@ -1,9 +1,8 @@
 import React from "react";
-import Container from "@/./app/components/Container";
 
 const Who_we_are = () => {
   return (
-    <div className="relative overflow-hidden mb-10">
+    <div className="relative overflow-hidden ">
       <video
         className="absolute top-0 left-0 w-full h-full object-cover"
         autoPlay
@@ -17,7 +16,7 @@ const Who_we_are = () => {
         Your browser does not support the video tag.
       </video>
 
-      <Container>
+      <div className="container mx-auto">
         <div className="relative flex justify-center ">
           <h2 className="text-[10px] text-[#FFFFFF] font-normal leading-[14px] tracking-[1.4px] uppercase pt-10">
             Who We Are
@@ -42,7 +41,7 @@ const Who_we_are = () => {
             </button>
           </div>
         </div>
-      </Container>
+      </div>
     </div>
   );
 };

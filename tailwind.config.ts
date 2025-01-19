@@ -1,5 +1,11 @@
 import type { Config } from "tailwindcss";
+import tailwindcssAnimate from "tailwindcss-animate";
 
+interface CustomContainerConfig {
+	maxWidth: string;
+	margin: string;
+	padding: string;
+  }
 const config: Config = {
     darkMode: ["class"],
     content: [
@@ -9,6 +15,11 @@ const config: Config = {
   ],
   theme: {
   	extend: {
+		container: {
+			maxWidth: '1920px',
+			margin: '0 auto',
+			padding: '0 5px',
+		  } as CustomContainerConfig,
   		keyframes: {
   			marquee: {
   				'0%': {
@@ -72,6 +83,6 @@ const config: Config = {
   		}
   	}
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [tailwindcssAnimate],
 };
 export default config;

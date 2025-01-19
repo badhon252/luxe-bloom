@@ -1,11 +1,9 @@
-import Hero from "@/app/components/Hero";
-import { Navbar } from "@/components/navbar/header-navbar";
+import Hero from "@/components/hero-section/Hero";
 import { PromotionalCarousel } from "../Sections/PromotionalCarousel";
 
 export default function HeroSection() {
   return (
-    <div className="">
-      <Navbar />
+    <div className="mt-[-5rem]">
       {/* Hero Section */}
       <Hero />
       <PromotionalCarousel />

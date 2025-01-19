@@ -1,9 +1,9 @@
 'use client';
 import Image from "next/image";
 import React, { useState } from "react";
-import rose from "@/../Public/assets/imge/rose.jpg";
-import hoverImage from "@/../Public/assets/imge/hover.jpg";
-import Flex from "./Flex";
+import rose from "@/../Public/assets/image/rose.jpg";
+import hoverImage from "@/../Public/assets/image/hover.jpg";
+import Flex from "../Flex";
 
 const ProductCard = ({children}: {children: React.ReactNode}) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -23,6 +23,7 @@ const ProductCard = ({children}: {children: React.ReactNode}) => {
           alt="rose"
           width={639}
           height={639}
+          className="transition-transform duration-300 "
         />
       </div>
 
