@@ -1,12 +1,12 @@
 "use client"
 
-import Image from "next/image"
+import Image, { StaticImageData } from "next/image"
 import { Dialog, DialogContent } from "@/components/ui/dialog"
 
 interface ImageModalProps {
   isOpen: boolean
   onClose: () => void
-  image: string
+  image: string | StaticImageData
   alt: string
 }
 

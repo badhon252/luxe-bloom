@@ -7,6 +7,7 @@ import HeroSection from '@/components/hero-section/hero-section'
 import Who_we_are from '@/components/Sections/Who_we_are'
 import BestSellerItems from '@/components/Sections/BestSellerItems'
 import TestimonialCarousel from '@/components/TestimonialCarousel'
+import LearnMore from '@/components/Sections/LearnMore'
 
 
 const page = () => {
@@ -20,6 +21,7 @@ const page = () => {
       <BestSellerItems/>
       <Who_we_are/>
       <TestimonialCarousel/>
+      <LearnMore/>
     </div>
   )
 }

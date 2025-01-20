@@ -1,6 +1,8 @@
+import { StaticImageData } from "next/image";
+
 // product.ts
 export interface ProductImage {
-  url: string;
+  url: string | StaticImageData;
   color: string;
   alt: string;
 }
@@ -22,7 +24,7 @@ export interface ProductSize {
   name: string;
   count: number;
   price: number;
-  image: string;
+  image:  StaticImageData;
 }
 
 export interface Product {
