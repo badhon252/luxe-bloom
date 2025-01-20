@@ -17,7 +17,7 @@ export function ProductImageGallery({ images }: ProductImageGalleryProps) {
       className="w-full"
     >
       {images.map((image) => (
-        <CarouselItem key={image.url}>
+        <CarouselItem key={"image.url"}>
           <Image
             src={image.url}
             alt={image.alt}
