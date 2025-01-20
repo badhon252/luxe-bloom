@@ -1,6 +1,8 @@
 import ProductPage from '@/components/cards/product-card'
+import AdoredCreations from '@/components/product/AdoredCreations'
 import ProductFaq from '@/components/product/product-faq'
 import ProductSlogan from '@/components/product/product-slogan'
+import ProductshipmentExperiance from '@/components/product/ProductshipmentExperiance'
 
 export default function page() {
   return (
@@ -8,6 +10,8 @@ export default function page() {
       <ProductPage/>
       <ProductSlogan/>
       <ProductFaq/>
+      <ProductshipmentExperiance/>
+      <AdoredCreations/>
     </div>
   )
 }
