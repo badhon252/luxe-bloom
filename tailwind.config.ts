@@ -12,7 +12,7 @@ const config: Config = {
     extend: {
       container: {
         center: true, // Ensures the container is centered
-        padding: "0 5px",
+        padding: "1rem",
         screens: {
           sm: "640px",
           md: "768px",

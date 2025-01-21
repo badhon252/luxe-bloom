@@ -6,7 +6,7 @@ import Heading from "./Heading";
 
 const Parisian_Hat_Boxes = () => {
   return (
-    <section className="mt-[65px] container mx-auto">
+    <section className="mt-[65px] max-w-[80vw] mx-auto">
       <div className="flex justify-between flex-col md:flex-row">
           <div className="w-full md:w-[48%]">
             <VeideoCard />
