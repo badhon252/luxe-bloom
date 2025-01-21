@@ -1,8 +1,9 @@
 import ProductPage from '@/components/cards/product-card'
+import AdoredCreations from '@/components/product/AdoredCreations'
 import ProductFaq from '@/components/product/product-faq'
 import ProductSlogan from '@/components/product/product-slogan'
-import Reviews from '@/components/product/ProductRating'
-import ProductRecommendations from '@/components/product/ProductRecommendations'
+import ReviewsSection from '@/components/product/ProductRating'
+import ProductshipmentExperiance from '@/components/product/ProductshipmentExperiance'
 
 export default function page() {
   return (
@@ -10,8 +11,9 @@ export default function page() {
       <ProductPage/>
       <ProductSlogan/>
       <ProductFaq/>
-      <ProductRecommendations/>
-      <Reviews/>
+      <ProductshipmentExperiance/>
+      <AdoredCreations/>
+      <ReviewsSection/>
     </div>
   )
 }
