@@ -17,7 +17,7 @@ const AdoredCreations = () => {
       {/* Marquee Animation */}
       <div className="relative overflow-hidden mt-10">
         <div className="flex items-center animate-marquee space-x-8">
-          {Array.from({ length: 8 }).map((_, index) => (
+          {Array.from({ length: 10 }).map((_, index) => (
             <div key={index} className="flex-shrink-0">
               <Image
                 src={slide5} // Use the same image
