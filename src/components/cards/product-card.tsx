@@ -139,6 +139,7 @@ const product: Product = {
     count: 47,
     rating: 5,
   },
+  
   price: 0,
   rating: 0,
   category: "ROSES",
