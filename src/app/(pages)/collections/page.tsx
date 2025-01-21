@@ -1,3 +1,4 @@
+import CollectionBulder from '@/components/Collections/CollectionBulder'
 import CollectionRender from '@/components/Collections/CollectionRender'
 import HeadingSection from '@/components/Collections/HeadingSection'
 import React from 'react'
@@ -7,6 +8,7 @@ const page = () => {
     <div className='container '>
         <HeadingSection/>
         <CollectionRender/>
+        <CollectionBulder/>
     </div>
   )
 }
