@@ -1,23 +1,27 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-// import Image from "next/image"
-import { Heart, Search, ShoppingCart, User } from 'lucide-react'
-import { useEffect, useState } from "react"
-// import logo from '@/../Public/assets/imge/logo.webp'
+import Link from "next/link";
+import { Heart, Search, ShoppingCart, User } from "lucide-react";
+import { useEffect, useState } from "react";
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "@/components/ui/hover-card";
+import NavbarDropdown from "../NavbarDropdwon/NavbarDropdwon";
 
 export function Navbar() {
-  const [scrolled, setScrolled] = useState(false)
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      const isScrolled = window.scrollY > 20
-      setScrolled(isScrolled)
-    }
+      const isScrolled = window.scrollY > 20;
+      setScrolled(isScrolled);
+    };
 
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <nav
@@ -29,7 +33,6 @@ export function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Left Navigation */}
           <div className="hidden md:flex space-x-8 text-sm">
-            
             <Link href="#" className="hover:opacity-70 transition-opacity">
               CONTACT US
             </Link>
@@ -40,9 +43,11 @@ export function Navbar() {
 
           {/* Center Logo */}
           <div className="flex-1 md:flex-none text-center">
-            <Link href="/" className="text-3xl font-serif tracking-wider font-extrabold">
-             {/* <Image src={logo} alt="Logo" width={100} height={100} /> */}
-             LUXE BLOOM
+            <Link
+              href="/"
+              className="text-3xl font-serif tracking-wider font-extrabold"
+            >
+              LUXE BLOOM
             </Link>
           </div>
 
@@ -57,7 +62,10 @@ export function Navbar() {
             <Link href="#" className="hover:opacity-70 transition-opacity">
               <User className="h-5 w-5" />
             </Link>
-            <Link href="#" className="flex items-center hover:opacity-70 transition-opacity">
+            <Link
+              href="#"
+              className="flex items-center hover:opacity-70 transition-opacity"
+            >
               <ShoppingCart className="h-5 w-5" />
               <span className="ml-1 text-sm">2</span>
             </Link>
@@ -65,22 +73,59 @@ export function Navbar() {
         </div>
 
         {/* Secondary Navigation */}
-        <div className="hidden md:flex justify-center space-x-12 py-4 text-sm">
-          <Link href="#" className="hover:opacity-70 transition-opacity">
+        <div className="hidden md:flex justify-center space-x-12 py-4 text-sm w-full">
+         
+          <HoverCard openDelay={100} closeDelay={100} > 
+            <HoverCardTrigger className="hover:opacity-70 transition-opacity">
+            <Link href="#" className="transition-opacity w-full text-center hover:underline">
             FLOWERS
           </Link>
-          <Link href="#" className="hover:opacity-70 transition-opacity">
-            VALENTINE&apos;S DAY
+            </HoverCardTrigger>
+            <HoverCardContent className=" relative ">
+              <div className=" !w-screen absolute left-[-270%] top-[-5px] border-none ">
+                <NavbarDropdown />
+              </div>
+            </HoverCardContent>
+          </HoverCard>
+          <HoverCard openDelay={100} closeDelay={100} > 
+            <HoverCardTrigger className="hover:opacity-70 transition-opacity">
+            <Link href="#" className="hover:opacity-70 transition-opacity">
+            VALENTINE&aposS DAY
           </Link>
-          <Link href="#" className="hover:opacity-70 transition-opacity">
+            </HoverCardTrigger>
+            <HoverCardContent className=" relative ">
+              <div className=" !w-screen absolute left-[-330%] top-[-5px] border-none ">
+                <NavbarDropdown />
+              </div>
+            </HoverCardContent>
+          </HoverCard>
+          <HoverCard openDelay={100} closeDelay={100} > 
+            <HoverCardTrigger className="hover:opacity-70 transition-opacity">
+            <Link href="#" className="hover:opacity-70 transition-opacity">
             GIFTS
           </Link>
-          <Link href="#" className="hover:opacity-70 transition-opacity">
+            </HoverCardTrigger>
+            <HoverCardContent className=" relative ">
+              <div className=" !w-screen absolute left-[-380%] top-[-5px] border-none ">
+                <NavbarDropdown />
+              </div>
+            </HoverCardContent>
+          </HoverCard>
+          <HoverCard openDelay={100} closeDelay={100} > 
+            <HoverCardTrigger className="hover:opacity-70 transition-opacity">
+            <Link href="#" className="hover:opacity-70 transition-opacity">
             EXPLORE
           </Link>
+            </HoverCardTrigger>
+            <HoverCardContent className=" relative ">
+              <div className=" !w-screen absolute left-[-420%] top-[-5px] border-none ">
+                <NavbarDropdown />
+              </div>
+            </HoverCardContent>
+          </HoverCard>
+         
         </div>
       </div>
     </nav>
-  )
+  );
 }
-
