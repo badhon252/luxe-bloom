@@ -27,7 +27,7 @@ const product: Product = {
       inStock: true,
       images: [
         {
-          url: productImg ,
+          url: productImg,
           color: "red",
           alt: "Red roses in vase",
         },
@@ -139,6 +139,13 @@ const product: Product = {
     count: 47,
     rating: 5,
   },
+  price: 0,
+  rating: 0,
+  category: "ROSES",
+  colors: [],
+  vesselMaterial: "BLACK CLASSIC",
+  vesselShape: "HEART",
+  images: []
 };
 
 export default function ProductPage() {
