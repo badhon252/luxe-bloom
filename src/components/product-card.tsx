@@ -35,7 +35,7 @@ export function ProductCard({ product }: ProductCardProps) {
           <div className="absolute left-2 top-2 flex flex-col gap-2">
             {product.isExclusive && (
               <Badge variant="secondary" className="bg-rose-100 text-rose-700 rounded-none">
-                VALENTINE&apos;S EXCLUSIVE
+                VALENTINE'S EXCLUSIVE
               </Badge>
             )}
             {product.tags?.map((tag) => (

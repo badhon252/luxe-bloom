@@ -7,7 +7,6 @@ const page = () => {
     <div className='container '>
         <HeadingSection/>
         <CollectionPage/>
-
     </div>
   )
 }

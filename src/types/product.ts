@@ -88,3 +88,10 @@ export interface FilterState {
   vesselShape?: VesselShape
 }
 
+export interface WishlistProps {
+  products: Product[]
+  onDuplicate: () => void
+  onDelete: () => void
+}
+
+export type WishlistStep = "preview" | "detail"
