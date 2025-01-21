@@ -1,7 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-        domains: ['via.placeholder.com'], // Add the external image domain here
+      domains: [
+        'via.placeholder.com',
+        'images.unsplash.com',
+        'media.istockphoto.com',
+        'plus.unsplash.com',
+      ],
       },
 };
 
