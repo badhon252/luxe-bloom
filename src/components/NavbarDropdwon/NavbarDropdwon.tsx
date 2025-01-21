@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import mini from "@/../public/assets/image/mini_rose (1).jpg"; // Ensure correct path and lowercase 'public'
+import mini from "@/../public/assets/image/mini_rose.jpg"; // Ensure correct path and lowercase 'public'
 
 const NavbarDropdown = () => {
   return (
