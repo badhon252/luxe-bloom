@@ -18,7 +18,7 @@ export const useWishlistStore = create<WishlistStore>((set, get) => ({
   wishlists: [
     {
       id: "1",
-      name: "My Wishlist",
+      name: "Flower Bouquet",
       products: [
         {
           id: "1",
