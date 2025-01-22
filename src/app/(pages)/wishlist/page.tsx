@@ -10,8 +10,8 @@ export default function WishlistPage() {
   const { view } = useWishlistStore()
 
   return (
-    <div className=" max-w-7xl mx-auto px-4 py-8">
-      <h1 className="text-4xl font-serif mb-8 text-center">MY WISHLIST</h1>
+    <div className=" max-w-7xl mx-auto px-4 py-8 pt-20">
+      <h1 className="text-4xl font-serif mb-8 ">MY WISHLIST</h1>
       <AnimatePresence mode="wait">
         {view === "preview" ? (
           <motion.div

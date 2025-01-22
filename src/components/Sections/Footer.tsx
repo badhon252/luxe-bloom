@@ -2,6 +2,7 @@ import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import Link from "next/link"
+import logo from '@/../Public/assets/image/logo.webp'
 
 export default function Footer() {
   return (
@@ -10,7 +11,7 @@ export default function Footer() {
         {/* Logo Section */}
         <div className="flex justify-center">
           <Image
-            src="/assets/image/logo.webp"
+            src={logo}
             alt="Venus ET Fleur Logo"
             width={120}
             height={120}

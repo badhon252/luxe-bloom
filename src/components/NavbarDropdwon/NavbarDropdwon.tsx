@@ -59,7 +59,6 @@ const NavbarDropdown = () => {
         <div className="border border-[#000000]/50 w-[60%] mx-auto mt-12 "></div>
         {/* ============list================= */}
         <div className=" flex gap-x-[276px] justify-center mt-7">
-          <div>
             <ul className="flex flex-col gap-y-5">
               <li className="text-[12px] text-[#000000]/70 font-normal leading-[14px] uppercase">
                 all collections
@@ -74,8 +73,6 @@ const NavbarDropdown = () => {
                 all collections
               </li>
             </ul>
-          </div>
-          <div>
             <ul className="flex flex-col gap-y-5">
               <li className="text-[12px] text-[#000000]/70 font-normal leading-[14px] uppercase">
                 flowers by vessel
@@ -90,8 +87,6 @@ const NavbarDropdown = () => {
                 all collections
               </li>
             </ul>
-          </div>
-          <div>
             <ul className="flex flex-col gap-y-5">
               <li className="text-[12px] text-[#000000]/70 font-normal leading-[14px] uppercase">
                 bespoke collections
@@ -106,8 +101,6 @@ const NavbarDropdown = () => {
                 all collections
               </li>
             </ul>
-          </div>
-          <div>
             <ul className="flex flex-col gap-y-5">
               <li className="text-[12px] text-[#000000]/70 font-normal leading-[14px] uppercase">
                 by occasion
@@ -124,7 +117,6 @@ const NavbarDropdown = () => {
             </ul>
           </div>
         </div>
-      </div>
     </section>
   );
 };

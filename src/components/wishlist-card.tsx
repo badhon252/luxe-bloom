@@ -9,7 +9,7 @@ interface WishlistCardProps {
   list: {
     id: string;
     name: string;
-    products: WishList[];
+    products: WishList[]; 
   };
   onViewList: () => void;
 }

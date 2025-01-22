@@ -18,14 +18,14 @@ export const useWishlistStore = create<WishlistStore>((set, get) => ({
   wishlists: [
     {
       id: "1",
-      name: "My Wishlist",
+      name: "Flower Bouquet",
       products: [
         {
           id: "1",
           name: "Le Mini Round",
           description: "White Classic / Pink",
           price: 49,
-          image: "/assets/image/product1.webp",
+          image: "https://plus.unsplash.com/premium_photo-1661308274084-5f985f79a9b2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
           variant: "White Classic / Pink",
           variants: [],
           sizes: [],
@@ -45,7 +45,7 @@ export const useWishlistStore = create<WishlistStore>((set, get) => ({
           name: "Porcelaine Vase",
           description: "White Classic / Pink",
           price: 49,
-          image: "/assets/image/product2.webp",
+          image: "https://plus.unsplash.com/premium_photo-1661308274084-5f985f79a9b2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
           variant: "White Classic / Pink",
           variants: [],
           sizes: [],
@@ -65,7 +65,7 @@ export const useWishlistStore = create<WishlistStore>((set, get) => ({
           name: "Porcelaine Vase",
           description: "White Classic / Pink",
           price: 49,
-          image: "/assets/image/product8.webp",
+          image: "https://plus.unsplash.com/premium_photo-1661308274084-5f985f79a9b2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
           variant: "White Classic / Pink",
           variants: [],
           sizes: [],
