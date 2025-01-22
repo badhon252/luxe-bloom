@@ -1,17 +1,22 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import { Heart, Search, ShoppingCart, User } from "lucide-react";
-import { useEffect, useState } from "react";
+import Link from 'next/link';
+import { Heart, ShoppingCart, User } from 'lucide-react';
+import { useEffect, useState } from 'react';
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
-} from "@/components/ui/hover-card";
-import NavbarDropdown from "../NavbarDropdwon/NavbarDropdwon";
+} from '@/components/ui/hover-card';
+import NavbarDropdown from '../NavbarDropdwon/NavbarDropdwon';
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import SignIn from '../Account/SignIn';
+import CreateAccount from '../Account/CreateAccount';
+import SearchOption from './search';
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const [activeModal, setActiveModal] = useState<'signIn' | 'createAccount'>('signIn'); // Track active modal state
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,8 +24,8 @@ export function Navbar() {
       setScrolled(isScrolled);
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
@@ -57,11 +62,46 @@ export function Navbar() {
               <Heart className="h-5 w-5" />
             </Link>
             <Link href="#" className="hover:opacity-70 transition-opacity">
-              <Search className="h-5 w-5" />
+              <SearchOption/>
             </Link>
-            <Link href="#" className="hover:opacity-70 transition-opacity">
-              <User className="h-5 w-5" />
-            </Link>
+            <Sheet>
+              <SheetTrigger>
+                <User className="h-5 w-5 cursor-pointer" />
+              </SheetTrigger>
+              <SheetContent className="w-full lg:min-w-[554px]">
+                <div className="flex justify-center mt-10">
+                  <div>
+                    {/* Modal Selection */}
+                    <div className="flex gap-14 mb-10">
+                      <button
+                        onClick={() => setActiveModal('signIn')}
+                        className={`text-sm text-[#000000]/70 font-normal uppercase tracking-[1.4px] ${
+                          activeModal === 'signIn' &&
+                          'border-b-[2px] border-b-[#d8e437]'
+                        }`}
+                      >
+                        Sign In
+                      </button>
+                      <button
+                        onClick={() => setActiveModal('createAccount')}
+                        className={`text-sm text-[#000000]/70 font-normal uppercase tracking-[1.4px] ${
+                          activeModal === 'createAccount' &&
+                          'border-b-[2px] border-b-[#d8e437]'
+                        }`}
+                      >
+                        Create Account
+                      </button>
+                    </div>
+
+                    {/* Modal Content */}
+                    <div className="mt-10 w-[300px] lg:w-[388px]">
+                      {activeModal === 'signIn' ? <SignIn /> : <CreateAccount />}
+                    </div>
+                  </div>
+                </div>
+              </SheetContent>
+            </Sheet>
+
             <Link
               href="#"
               className="flex items-center hover:opacity-70 transition-opacity"
