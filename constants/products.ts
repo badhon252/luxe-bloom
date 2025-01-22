@@ -36,7 +36,9 @@ export const PRODUCTS: Product[] = [
     reviews: {
       count: 0,
       rating: 0
-    }
+    },
+    image: "",
+    variant: ""
   },
   {
     id: "2",
@@ -56,7 +58,9 @@ export const PRODUCTS: Product[] = [
     reviews: {
       count: 0,
       rating: 0
-    }
+    },
+    image: "",
+    variant: ""
   },
   {
     id: "3",
@@ -77,7 +81,9 @@ export const PRODUCTS: Product[] = [
     reviews: {
       count: 0,
       rating: 0
-    }
+    },
+    image: "",
+    variant: ""
   },
   {
     id: "4",
@@ -97,7 +103,9 @@ export const PRODUCTS: Product[] = [
     reviews: {
       count: 0,
       rating: 0
-    }
+    },
+    image: "",
+    variant: ""
   },
   {
     id: "5",
@@ -117,7 +125,9 @@ export const PRODUCTS: Product[] = [
     reviews: {
       count: 0,
       rating: 0
-    }
+    },
+    image: "",
+    variant: ""
   },
   {
     id: "6",
@@ -137,7 +147,9 @@ export const PRODUCTS: Product[] = [
     reviews: {
       count: 0,
       rating: 0
-    }
+    },
+    image: "",
+    variant: ""
   },
   {
     id: "7",
@@ -158,7 +170,9 @@ export const PRODUCTS: Product[] = [
     reviews: {
       count: 0,
       rating: 0
-    }
+    },
+    image: "",
+    variant: ""
   },
   {
     id: "8",
@@ -178,7 +192,9 @@ export const PRODUCTS: Product[] = [
     reviews: {
       count: 0,
       rating: 0
-    }
+    },
+    image: "",
+    variant: ""
   },
   {
     id: "9",
@@ -198,7 +214,9 @@ export const PRODUCTS: Product[] = [
     reviews: {
       count: 0,
       rating: 0
-    }
+    },
+    image: "",
+    variant: ""
   },
   {
     id: "10",
@@ -218,7 +236,9 @@ export const PRODUCTS: Product[] = [
     reviews: {
       count: 0,
       rating: 0
-    }
+    },
+    image: "",
+    variant: ""
   },
 ]
 

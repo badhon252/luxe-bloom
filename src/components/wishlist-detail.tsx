@@ -1,47 +1,101 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { ProductCard } from "./product-card"
-import { WishlistHeader } from "./wishlist-header"
-import type { Product } from "../types"
+import { useWishlistStore } from "../../store/wishlist-store"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent } from "@/components/ui/card"
+import { MoreVertical, ArrowLeft, X } from "lucide-react"
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
+import { DuplicateListDialog } from "./duplicate-list-dialog"
+import { useState } from "react"
+import Image from "next/image"
 
-interface WishlistDetailProps {
-  products: Product[]
-  onRemoveProduct: (id: string) => void
-  onAddToCart: (id: string) => void
-  onBack: () => void
-  onDuplicate: () => void
-  onDelete: () => void
-}
+export function WishlistDetail() {
+  const { wishlists, currentWishlist, setView, addToCart, removeFromWishlist, duplicateWishlist, deleteWishlist } =
+    useWishlistStore()
 
-export function WishlistDetail({
-  products,
-  onRemoveProduct,
-  onAddToCart,
-  onBack,
-  onDuplicate,
-  onDelete,
-}: WishlistDetailProps) {
+  const [showDuplicateDialog, setShowDuplicateDialog] = useState(false)
+
+  const wishlist = wishlists.find((w) => w.id === currentWishlist)
+
+  if (!wishlist) return null
+
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      className="container mx-auto px-4"
-    >
-      <WishlistHeader itemCount={products.length} onBack={onBack} onDuplicate={onDuplicate} onDelete={onDelete} />
+    <div>
+      <div className="flex items-center justify-between mb-8">
+        <Button variant="ghost" onClick={() => setView("preview")} className="flex items-center gap-2">
+          <ArrowLeft className="w-4 h-4" />
+          Back
+        </Button>
+        <h2 className="text-xl">{wishlist.name}</h2>
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <Button variant="ghost" size="icon">
+              <MoreVertical className="w-4 h-4" />
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent align="end">
+            <DropdownMenuItem onClick={() => setShowDuplicateDialog(true)}>Duplicate List</DropdownMenuItem>
+            <DropdownMenuItem
+              className="text-red-600"
+              onClick={() => {
+                deleteWishlist(wishlist.id)
+                setView("preview")
+              }}
+            >
+              Delete List
+            </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
+      </div>
 
-      <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-        {products.map((product) => (
-          <ProductCard
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {wishlist.products.map((product) => (
+          <motion.div
             key={product.id}
-            product={product}
-            onRemove={() => onRemoveProduct(product.id)}
-            onAddToCart={() => onAddToCart(product.id)}
-          />
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            <Card>
+              <CardContent className="p-4">
+                <div className="relative aspect-square mb-4">
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    className="absolute right-2 top-2 z-10"
+                    onClick={() => removeFromWishlist(wishlist.id, product.id)}
+                  >
+                    <X className="w-4 h-4" />
+                  </Button>
+                  <Image
+                    src={product.image || "/placeholder.svg"}
+                    alt={product.name}
+                    fill
+                    className="object-cover rounded-md"
+                  />
+                </div>
+                <h3 className="font-serif text-lg mb-1">{product.name}</h3>
+                <p className="text-sm text-gray-600 mb-2">{product.variant}</p>
+                <p className="text-sm mb-4">STARTING AT ${product.price}</p>
+                <Button onClick={() => addToCart(product)} className="w-full bg-black text-white hover:bg-gray-800">
+                  ADD TO CART
+                </Button>
+              </CardContent>
+            </Card>
+          </motion.div>
         ))}
-      </motion.div>
-    </motion.div>
+      </div>
+
+      <DuplicateListDialog
+        open={showDuplicateDialog}
+        onOpenChange={setShowDuplicateDialog}
+        onDuplicate={() => {
+          duplicateWishlist(wishlist.id)
+          setShowDuplicateDialog(false)
+        }}
+      />
+    </div>
   )
 }
 

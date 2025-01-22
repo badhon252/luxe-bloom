@@ -1,29 +1,32 @@
 "use client"
 
-import { motion, AnimatePresence } from "framer-motion"
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { Button } from "@/components/ui/button"
 
 interface DuplicateModalProps {
   isOpen: boolean
   onClose: () => void
-  onSave: () => void
+  onConfirm: () => void
 }
 
-export function DuplicateModal({ isOpen, onClose, onSave }: DuplicateModalProps) {
+export function DuplicateModal({ isOpen, onClose, onConfirm }: DuplicateModalProps) {
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-md">
+      <DialogContent>
         <DialogHeader>
-          <DialogTitle className="font-serif text-center text-2xl">DUPLICATE LIST</DialogTitle>
+          <DialogTitle className="text-center text-xl">DUPLICATE LIST</DialogTitle>
         </DialogHeader>
-        <div className="py-6">
-          <h3 className="font-serif mb-4">My Wishlist Copy</h3>
-          <div className="flex justify-end gap-4">
+        <div className="mt-4 space-y-4">
+          <div className="border-t border-gray-200 pt-4">
+            <h3 className="text-center">My Wishlist Copy</h3>
+          </div>
+          <div className="flex justify-center gap-4">
             <Button variant="outline" onClick={onClose}>
               CANCEL
             </Button>
-            <Button onClick={onSave}>SAVE COPY</Button>
+            <Button onClick={onConfirm} className="bg-black text-white hover:bg-black/90">
+              SAVE COPY
+            </Button>
           </div>
         </div>
       </DialogContent>

@@ -1,82 +1,41 @@
 "use client"
 
+import { motion } from "framer-motion"
 import Image from "next/image"
-import { Heart, Star } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { cn } from "@/lib/utils"
+import { X } from "lucide-react"
 import type { Product } from "@/types/product"
-import { useState } from "react"
+import { Button } from "@/components/ui/button"
 
 interface ProductCardProps {
   product: Product
+  onAddToCart: () => void
+  onRemove: () => void
 }
 
-export function ProductCard({ product }: ProductCardProps) {
-  const [isWishlisted, setIsWishlisted] = useState(false)
-
+export function ProductCard({ product, onAddToCart, onRemove }: ProductCardProps) {
   return (
-    <Card className="group relative border-0 rounded-none">
-      <CardContent className="p-0">
-        <div className="relative aspect-square">
-          <Image src={product.images[0] || "/placeholder.svg"} alt={product.name} fill className="object-cover" />
-          <Button
-            size="icon"
-            variant="ghost"
-            className={cn(
-              "absolute right-2 top-2 opacity-0 group-hover:opacity-100 transition-opacity",
-              isWishlisted && "opacity-100 text-rose-500",
-            )}
-            onClick={() => setIsWishlisted(!isWishlisted)}
-          >
-            <Heart className={cn("h-5 w-5", isWishlisted && "fill-current")} />
-          </Button>
-          <div className="absolute left-2 top-2 flex flex-col gap-2">
-            {product.isExclusive && (
-              <Badge variant="secondary" className="bg-rose-100 text-rose-700 rounded-none">
-                VALENTINE'S EXCLUSIVE
-              </Badge>
-            )}
-            {product.tags?.map((tag) => (
-              <Badge key={tag} variant="secondary" className="bg-rose-100 text-rose-700 rounded-none">
-                {tag}
-              </Badge>
-            ))}
-          </div>
-        </div>
-        <div className="p-4 space-y-4">
-          <div className="flex items-center justify-between">
-            <h3 className="font-serif text-lg">{product.name}</h3>
-            <div className="flex items-center">
-              <Star className="h-4 w-4 fill-primary text-primary mr-1" />
-              <span className="text-sm">{product.rating.toFixed(1)}</span>
-            </div>
-          </div>
-          <p className="text-sm text-muted-foreground uppercase tracking-wide">
-            {product.vesselMaterial} • {product.colors[0].name}
-          </p>
-          <div className="flex items-center justify-between">
-            <div className="flex -space-x-1.5">
-              {product.colors.slice(0, 6).map((color) => (
-                <div
-                  key={color.name}
-                  className="h-5 w-5 rounded-full border-2 border-white ring-1 ring-gray-200"
-                  style={{ backgroundColor: color.value }}
-                  title={color.label}
-                />
-              ))}
-              {product.colors.length > 6 && (
-                <div className="h-5 w-5 rounded-full border-2 border-white bg-gray-100 flex items-center justify-center text-xs text-gray-600">
-                  +{product.colors.length - 6}
-                </div>
-              )}
-            </div>
-            <span className="font-medium uppercase tracking-wide text-sm">Starting at ${product.price}</span>
-          </div>
-        </div>
-      </CardContent>
-    </Card>
+    <motion.div
+      initial={{ opacity: 0, scale: 0.95 }}
+      animate={{ opacity: 1, scale: 1 }}
+      exit={{ opacity: 0, scale: 0.95 }}
+      className="bg-white p-4 relative group"
+    >
+      <button
+        onClick={onRemove}
+        className="absolute right-2 top-2 z-10 opacity-0 group-hover:opacity-100 transition-opacity"
+      >
+        <X className="h-5 w-5" />
+      </button>
+      <div className="aspect-square relative mb-4">
+        <Image src={product.image || "/placeholder.svg"} alt={product.name} fill className="object-cover" />
+      </div>
+      <h3 className="font-medium mb-1">{product.name}</h3>
+      <p className="text-sm text-gray-500 mb-2">{product.variant}</p>
+      <p className="text-sm text-gray-500 mb-4">STARTING AT ${product.price}</p>
+      <Button onClick={onAddToCart} variant="default" className="w-full bg-black text-white hover:bg-black/90">
+        {product.inCart ? "ADDED TO CART" : "ADD TO CART"}
+      </Button>
+    </motion.div>
   )
 }
 

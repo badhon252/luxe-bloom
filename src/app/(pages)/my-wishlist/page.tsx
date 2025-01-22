@@ -1,5 +1,5 @@
-import WishlistPage from "@/components/wishlist/wishlist-page";
+
 
 export default function page() {
-  return  <WishlistPage/> 
+  return  <h1>My Wishlist</h1> 
 }

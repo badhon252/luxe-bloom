@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { ProductFilters } from "@/components/product-filters"
-import { ProductCard } from "@/components/product-card"
+import { ProductCard } from "@/components/product/product-card"
 import {  type FilterState, type SortOption } from "@/types/product"
 import { PRODUCTS } from "../../../constants/products"
 import { Button } from "@/components/ui/button"
