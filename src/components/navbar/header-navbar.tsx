@@ -74,12 +74,14 @@ export function Navbar() {
 
         {/* Secondary Navigation */}
         <div className="hidden md:flex justify-center space-x-12 py-4 text-sm w-full">
-         
-          <HoverCard openDelay={100} closeDelay={100} > 
+          <HoverCard openDelay={100} closeDelay={100}>
             <HoverCardTrigger className="hover:opacity-70 transition-opacity">
-            <Link href="#" className="transition-opacity w-full text-center hover:underline">
-            FLOWERS
-          </Link>
+              <Link
+                href="#"
+                className="transition-opacity w-full text-center hover:underline"
+              >
+                FLOWERS
+              </Link>
             </HoverCardTrigger>
             <HoverCardContent className=" relative ">
               <div className=" !w-screen absolute left-[-270%] top-[-5px] border-none ">
@@ -87,11 +89,11 @@ export function Navbar() {
               </div>
             </HoverCardContent>
           </HoverCard>
-          <HoverCard openDelay={100} closeDelay={100} > 
+          <HoverCard openDelay={100} closeDelay={100}>
             <HoverCardTrigger className="hover:opacity-70 transition-opacity">
-            <Link href="#" className="hover:opacity-70 transition-opacity">
-            VALENTINE&aposS DAY
-          </Link>
+              <Link href="#" className="hover:opacity-70 transition-opacity">
+                VALENTINE&aposS DAY
+              </Link>
             </HoverCardTrigger>
             <HoverCardContent className=" relative ">
               <div className=" !w-screen absolute left-[-330%] top-[-5px] border-none ">
@@ -99,11 +101,11 @@ export function Navbar() {
               </div>
             </HoverCardContent>
           </HoverCard>
-          <HoverCard openDelay={100} closeDelay={100} > 
+          <HoverCard openDelay={100} closeDelay={100}>
             <HoverCardTrigger className="hover:opacity-70 transition-opacity">
-            <Link href="#" className="hover:opacity-70 transition-opacity">
-            GIFTS
-          </Link>
+              <Link href="#" className="hover:opacity-70 transition-opacity">
+                GIFTS
+              </Link>
             </HoverCardTrigger>
             <HoverCardContent className=" relative ">
               <div className=" !w-screen absolute left-[-380%] top-[-5px] border-none ">
@@ -111,11 +113,11 @@ export function Navbar() {
               </div>
             </HoverCardContent>
           </HoverCard>
-          <HoverCard openDelay={100} closeDelay={100} > 
+          <HoverCard openDelay={100} closeDelay={100}>
             <HoverCardTrigger className="hover:opacity-70 transition-opacity">
-            <Link href="#" className="hover:opacity-70 transition-opacity">
-            EXPLORE
-          </Link>
+              <Link href="#" className="hover:opacity-70 transition-opacity">
+                EXPLORE
+              </Link>
             </HoverCardTrigger>
             <HoverCardContent className=" relative ">
               <div className=" !w-screen absolute left-[-420%] top-[-5px] border-none ">
@@ -123,7 +125,6 @@ export function Navbar() {
               </div>
             </HoverCardContent>
           </HoverCard>
-         
         </div>
       </div>
     </nav>

@@ -139,14 +139,16 @@ const product: Product = {
     count: 47,
     rating: 5,
   },
-  
+
   price: 0,
   rating: 0,
   category: "ROSES",
   colors: [],
   vesselMaterial: "BLACK CLASSIC",
   vesselShape: "HEART",
-  images: []
+  images: [],
+  image: "",
+  variant: ""
 };
 
 export default function ProductPage() {

@@ -28,6 +28,7 @@ export interface ProductSize {
 }
 
 export interface Product {
+  [x: string]: unknown;
   id: string;
   name: string;
   description: string;
@@ -88,3 +89,39 @@ export interface FilterState {
   vesselShape?: VesselShape
 }
 
+export interface WishlistProps {
+  products: Product[]
+  onDuplicate: () => void
+  onDelete: () => void
+}
+
+export type WishlistStep = "preview" | "detail"
+
+
+
+export interface Product {
+  id: string
+  name: string
+  description: string
+  price: number
+  image: string
+  variant: string
+}
+
+export interface WishlistItem {
+  id: string
+  products: Product[]
+  name: string
+}
+
+export type WishlistView = "preview" | "detail"
+
+
+export interface WishList {
+  id: string; // Unique ID for the wishlist item
+  product: Product; // Or the relevant product data
+  quantity: number;  // Or any other relevant property
+  name: string;
+  image: string;
+  // Add any other properties relevant to your wishlist items
+}

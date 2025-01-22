@@ -6,6 +6,7 @@ const nextConfig = {
         'images.unsplash.com',
         'media.istockphoto.com',
         'plus.unsplash.com',
+        'public.blob.vercel-storage.com'
       ],
       },
 };
