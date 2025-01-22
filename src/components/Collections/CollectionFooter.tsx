@@ -91,14 +91,14 @@ const CollectionFooter = () => {
 
       {/* Accordion Section */}
       <div className="py-10 bg-[#F5F4F2] w-full">
-        <div className="container">
+        <div className="container  mx-auto lg:pl-[200px]">
           <h3 className="text-[25px] text-[#000000]/90 font-semibold tracking-[1.5px] capitalize text-center lg:text-left">
             Frequently Asked Questions
           </h3>
           <Accordion
             type="single"
             collapsible
-            className="w-full lg:w-[60%] mx-auto lg:pl-[200px] mt-5"
+            className="w-full lg:w-[60%] mt-5"
           >
             <AccordionItem value="item-1">
               <AccordionTrigger className="text-[12px] text-[#000000]/90 font-normal uppercase tracking-[1.5px]">
