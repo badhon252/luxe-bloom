@@ -9,6 +9,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import Link from "next/link";
 
 interface Review {
   id: number;
@@ -124,7 +125,7 @@ export default function ReviewsSection() {
   }, [reviews, sortBy]);
 
   return (
-    <div className="max-w-2xl mx-auto px-4">
+    <div className="max-w-7xl mx-auto px-4 mt-20" id="reviews">
       <div className="space-y-4 py-8">
         <div className="text-center space-y-2">
           <h2 className="text-2xl font-serif tracking-wide">REVIEWS</h2>
@@ -137,9 +138,9 @@ export default function ReviewsSection() {
           </div>
         </div>
 
-        <div className="flex justify-end">
+        <div className="flex justify-center">
           <Select value={sortBy} onValueChange={setSortBy}>
-            <SelectTrigger className="w-[180px]">
+            <SelectTrigger className="w-[180px] border-0 border-b-[1px] outline-none shadow-transparent rounded-none">
               <SelectValue placeholder="Sort by" />
             </SelectTrigger>
             <SelectContent>
@@ -156,42 +157,34 @@ export default function ReviewsSection() {
 
         <div className="space-y-6">
           {sortedReviews.map((review) => (
-            <div key={review.id} className="border-t pt-6 flex items-center justify-between gap-2">
+            <div key={review.id} className="border-t pt-6 flex items-center md:gap-20 gap-5">
               <div className="space-y-1">
                 <div className="flex items-start gap-1 mb-1">
                   {[...Array(review.rating)].map((_, i) => (
                     <Star
                       key={i}
-                      className="w-4 h-4 fill-current text-yellow-400"
+                      className="w-3 h-3 fill-current text-yellow-400"
                     />
                   ))}
                 </div>
-                <div className="flex items-center gap-2">
-                  <span className="font-medium">{review.author}</span>
+                <div className="">
+                  <h3 className="font-medium text-nowrap">{review.author}</h3>
+
                   {review.isVerified && (
-                    <span className="text-xs text-muted-foreground">
+                    <p className="text-[8px] text-muted-foreground">
                       VERIFIED BUYER
-                    </span>
+                    </p>
                   )}
                 </div>
 
-                <h3 className="font-medium">{review.title}</h3>
-
-                {review.hasMedia && (
+                {/* {review.hasMedia && (
                   <div className="mt-2">
-                    <span className="text-xs text-blue-600">
+                    <span className="text-xs ">
                       Photos & Videos
                     </span>
                   </div>
-                )}
-                {review.isVerified && (
-                  <div className="flex items-center gap-2 mt-2">
-                    <span className="text-xs text-muted-foreground">
-                      Verified by Shop
-                    </span>
-                  </div>
-                )}
-                <p className="text-sm text-muted-foreground">{review.date}</p>
+                )} */}
+                <p className="text-xs text-muted-foreground">{review.date}</p>
               </div>
               <p className="text-sm whitespace-pre-line">{review.content}</p>
             </div>
@@ -199,8 +192,8 @@ export default function ReviewsSection() {
         </div>
 
         <div className="text-center pt-4">
-          <button className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
-            SHOW MORE
+          <button className="text-xs hover:underline font-medium text-muted-foreground hover:text-foreground transition-colors">
+           <Link href="#"> SHOW MORE</Link>
           </button>
         </div>
       </div>

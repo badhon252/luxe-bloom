@@ -38,3 +38,53 @@ export interface Product {
     rating: number;
   };
 }
+
+export interface Product {
+  id: string
+  name: string
+  description: string
+  price: number
+  rating: number
+  category: ProductCategory
+  colors: Color[]
+  vesselMaterial: VesselMaterial
+  vesselShape: VesselShape
+  images: string[]
+  tags?: string[]
+  isExclusive?: boolean
+}
+
+export type ProductCategory = "ROSES" | "HYDRANGEAS" | "MIXED FLORALS" | "REFLEXED ROSES"
+
+export interface Color {
+  name: string
+  value: string
+  label: string
+}
+
+export type VesselMaterial =
+  | "BLACK CLASSIC"
+  | "BLACK SUEDE"
+  | "BLUSH SUEDE"
+  | "CREAM SUEDE"
+  | "DUSTY BLUE SUEDE"
+  | "FLÈCHE DE EROS"
+  | "GLASS"
+  | "PORCELAIN"
+  | "RED SUEDE"
+  | "STONE"
+  | "WHITE CLASSIC"
+  | "WINTER SUEDE"
+
+export type VesselShape = "HEART" | "LETTER" | "NARROW" | "PETAL" | "RECTANGLE" | "ROUND" | "SQUARE"
+
+export type SortOption = "featured" | "best-selling" | "price-low-high" | "price-high-low"
+
+export interface FilterState {
+  category?: ProductCategory
+  color?: string
+  vesselMaterial?: VesselMaterial
+  priceRange?: [number, number]
+  vesselShape?: VesselShape
+}
+
