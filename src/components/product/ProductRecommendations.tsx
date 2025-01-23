@@ -15,7 +15,7 @@ const ProductRemondations = () => {
     <section className="container mx-auto">
       <div className="mt-[55px] relative ">
         
-        <h2 className="text-[3.5rem] text-[#000000] leading-[34px]  tracking-[-0.2px] uppercase mt-10">You May Also Like</h2>
+        <h2 className="text-[2rem]  md:text-[3.5rem] text-[#000000] leading-[34px]  tracking-[-0.2px] uppercase mt-10">You May Also Like</h2>
         <Carousel
           opts={{
             align: "start",

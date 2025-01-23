@@ -11,7 +11,7 @@ const LearnMore = () => {
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10">
         <Flex 
-          className="flex flex-col md:flex-row md:justify-between items-center gap-6 md:gap-0 relative"
+          className="flex flex-col md:flex-row md:justify-around items-center gap-6 md:gap-0 relative"
         >
           {/* Eternity Flowers */}
           <Link href="#">

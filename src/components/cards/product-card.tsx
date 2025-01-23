@@ -162,8 +162,8 @@ export default function ProductPage() {
   const allImages = product.variants?.flatMap((v) => v.images || []) || [];
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <div className="flex gap-8 items-center justify-center">
+    <div className="container max-w-[1600px] mx-auto px-4 py-8">
+      <div className="flex flex-col lg:flex-row gap-8 items-center justify-center">
         <div className="flex-2">
           
         <ProductGallery
@@ -174,18 +174,18 @@ export default function ProductPage() {
 
         <div className="space-y-6 flex-1">
           <div className="space-y-2">
-            <h1 className="text-4xl font-light tracking-wider">
+            <h1 className=" text-[25px] md:text-4xl font-light tracking-wider">
               {product.name}
             </h1>
-            <div className="flex items-center gap-4">
+            <div className="flex  items-center gap-2 md:gap-4 ">
               <div className="flex items-center gap-2">
-                <span className="text-xl">${selectedSize.price}</span>
-                <span className="text-gray-600">•</span>
-                <span className="text-gray-600">
+                <span className="text-base md:text-xl ">${selectedSize.price}</span>
+                <span className="text-gray-600 ">•</span>
+                <span className="text-gray-600 text-xs md:text-base  ">
                   {selectedSize.count} Long-Stem {product.description}
                 </span>
               </div>
-              <Link href="#" className="text-gray-600 underline">
+              <Link href="#" className="text-gray-600 underline text-xs md:text-base ">
                 Learn More
               </Link>
             </div>
