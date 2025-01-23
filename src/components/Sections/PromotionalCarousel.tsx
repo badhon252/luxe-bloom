@@ -42,7 +42,7 @@ export function PromotionalCarousel() {
       <CarouselContent>
         {promotionalMessages.map((message) => (
           <CarouselItem key={message.id} className="pl-0">
-            <div className="flex h-10 items-center justify-center px-4 text-center text-sm font-medium text-white sm:text-base">
+            <div className="flex h-10 items-center justify-center px-4 text-center text-[10px] md:text-sm font-medium text-white sm:text-base">
               {message.text}
             </div>
           </CarouselItem>

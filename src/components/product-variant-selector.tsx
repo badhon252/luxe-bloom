@@ -68,12 +68,12 @@ export function ProductVariantSelector({
               {!selectedVariant.inStock && " (NO STOCK)"}
             </span>
           </div>
-          <div className="flex gap-2">
+          <div className="flex border rounded-full border-[#eee235]">
             <Button
               variant="outline"
               size="sm"
               className={cn(
-                "text-xs",
+                "text-xs border-none  px-6 py-1 rounded-full",
                 viewMode === "grid" && "bg-gray-100"
               )}
               onClick={() => setViewMode("grid")}
@@ -84,7 +84,7 @@ export function ProductVariantSelector({
               variant="outline"
               size="sm"
               className={cn(
-                "text-xs",
+                "text-xs border-none  px-6 py-1 rounded-full",
                 viewMode === "list" && "bg-gray-100"
               )}
               onClick={() => setViewMode("list")}

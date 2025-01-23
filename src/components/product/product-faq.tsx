@@ -9,8 +9,9 @@ import img from "@/../../Public/assets/image/product-faq.webp";
 
 export default function ProductFaq() {
   return (
-    <section className="flex items-center justify-center container mx-auto">
-      <Accordion type="single" collapsible className="w-full flex-1 mx-32" defaultValue="item-1">
+    <section className="flex flex-col lg:flex-row items-center justify-center container mx-auto">
+     
+      <Accordion type="single" collapsible className="w-full md:w-[55%] flex-1 mx-32" defaultValue="item-1">
         <AccordionItem value="item-1">
           <AccordionTrigger>Product Description</AccordionTrigger>
           <AccordionContent>
@@ -69,7 +70,7 @@ export default function ProductFaq() {
         </AccordionItem>
       </Accordion>
 
-      <div className="flex-1 w-full">
+      <div className="flex-1 w-full lg:w-[40%]">
         <Image
           src={img}
           alt="flower"

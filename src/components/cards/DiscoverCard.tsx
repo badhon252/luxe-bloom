@@ -58,7 +58,7 @@ const DiscoverCard: React.FC<DiscoverCardProps> = ({ imgsrc, title }) => {
       ></div>
 
       <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] z-10">
-        <p className="text-[50px] text-[#FFFFFF] font-normal leading-[44px] tracking-[-3px] uppercase transition-opacity duration-500">
+        <p className="text-[35px] md:text-[50px] text-[#FFFFFF] font-normal leading-[44px] md:tracking-[-3px] uppercase transition-opacity duration-500">
           {title}
         </p>
       </div>

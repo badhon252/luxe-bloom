@@ -30,7 +30,7 @@ export function ProductGallery({ images = [], currentColor }: ProductGalleryProp
   }
 
   return (
-    <div className="relative flex items-center gap-4 h-screen">
+    <div className="relative flex items-center gap-4  md:h-screen">
      
 
       {/* Main Image */}

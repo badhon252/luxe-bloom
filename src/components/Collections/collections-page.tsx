@@ -59,7 +59,7 @@ export default function CollectionPage() {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="space-y-4 max-w-3xl mx-auto">
-        <h1 className="text-4xl md:text-5xl font-serif">SHOP ALL ETERNITY FLOWERS</h1>
+        <h1 className="text-2xl lg:text-4xl md:text-5xl font-serif">SHOP ALL ETERNITY FLOWERS</h1>
         <p className="text-lg text-muted-foreground">
           Explore our selection of Eternity® Flower bouquets and luxury flowers: real, preserved blooms crafted to last
           a year or more, bringing forever beauty and charm to any space.
