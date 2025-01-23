@@ -17,7 +17,7 @@ export function CartSheet() {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button variant="outline" className="relative">
+        <Button variant="outline" className="relative w-[30px] lg:w-[45px] ml-2  ">
           <ShoppingBag className="h-5 w-5" />
           {items.length > 0 && (
             <span className="absolute -top-2 -right-2 h-5 w-5 rounded-full bg-black text-xs text-white flex items-center justify-center">
