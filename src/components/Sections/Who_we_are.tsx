@@ -24,19 +24,19 @@ const Who_we_are = () => {
         </div>
         <div className="relative flex justify-center text-center mt-10">
           <div className="pb-[55px]">
-            <h4 className="text-[28px] text-[#FFFFFF] font-normal leading-[50px] tracking-[-0.05px] uppercase">
+            <h4 className="text-[20px] md:text-[28px] text-[#FFFFFF] font-normal leading-[50px] tracking-[-0.05px] uppercase">
               Pioneers of Eternity Flowers
             </h4>
-            <h4 className="text-[28px] text-[#FFFFFF] font-normal leading-[50px] tracking-[-0.05px] uppercase">
+            <h4 className="text-[20px] md:text-[28px] text-[#FFFFFF] font-normal leading-[50px] tracking-[-0.05px] uppercase">
               Luxury That Lasts All Year
             </h4>
-            <h4 className="text-[28px] text-[#FFFFFF] font-normal leading-[50px] tracking-[-0.05px] uppercase">
+            <h4 className="text-[20px] md:text-[28px] text-[#FFFFFF] font-normal leading-[50px] tracking-[-0.05px] uppercase">
               Craftsmanship in Every Petal
             </h4>
-            <h4 className="text-[28px] text-[#FFFFFF] font-normal leading-[50px] tracking-[-0.05px] uppercase">
+            <h4 className="text-[20px] md:text-[28px] text-[#FFFFFF] font-normal leading-[50px] tracking-[-0.05px] uppercase">
               Exclusively Made To Order
             </h4>
-            <button className="text-[10px] text-[#FFFFFF] font-normal leading-[14px] tracking-[1.4px] uppercase   py-5 px-[73px]   border-[1px] border-[#FFFFFF] hover:bg-[#6C1A19] hover:border-[#6C1A19] duration-300 mt-10 ">
+            <button className="text-[10px] text-[#FFFFFF] font-normal leading-[14px] tracking-[1.4px] uppercase   py-5 px-12 nd:px-[73px]   border-[1px] border-[#FFFFFF] hover:bg-[#6C1A19] hover:border-[#6C1A19] duration-300 mt-10 ">
               Learn More
             </button>
           </div>

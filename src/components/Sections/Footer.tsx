@@ -26,7 +26,7 @@ export default function Footer() {
             <Input
               type="email"
               placeholder="SIGN UP FOR EMAILS"
-              className="border-0 bg-transparent px-0 focus-visible:ring-0"
+              className="border-0 bg-transparent px-0 py-3 focus-visible:ring-0 placeholder:text-[12px] mt-2"
             />
             <Button
               type="submit"
@@ -40,7 +40,7 @@ export default function Footer() {
         </div>
 
         {/* Links Section */}
-        <div className="grid grid-cols-1 gap-8 text-center sm:grid-cols-2 md:grid-cols-3 *:text-[8px]">
+        <div className="grid grid-cols-1  gap-8 text-center sm:grid-cols-2 md:grid-cols-3 *:text-[8px] ">
           {/* Information Column */}
           <div className="space-y-4">
             <h4 className="text-sm uppercase tracking-widest">Information</h4>

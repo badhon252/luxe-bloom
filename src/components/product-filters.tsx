@@ -110,7 +110,7 @@ export function ProductFilters({ filters, onFilterChange }: ProductFiltersProps)
               key={category}
               variant="ghost"
               className={cn(
-                "w-full justify-start text-base font-normal tracking-wide",
+                "w-full justify-start text-sm  lg:text-base font-normal tracking-wide",
                 filters.category === category && "bg-gray-100",
               )}
               onClick={() => onFilterChange({ ...filters, category })}

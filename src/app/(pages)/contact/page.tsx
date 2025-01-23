@@ -105,7 +105,7 @@ const Page: React.FC = () => {
           className="w-[768px] border border-[#000000]/20 pb-7"
         >
           <div className="w-full">
-            <h2 className="text-[40px] text-[#000000] font-normal leading-[32px] tracking-[-0.05px] uppercase pl-10 py-6 border-b">
+            <h2 className="text-[28px]  md:text-[40px] text-[#000000] font-normal leading-[32px] tracking-[-0.05px] uppercase pl-10 py-6 border-b">
               Contact us
             </h2>
           </div>
