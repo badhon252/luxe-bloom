@@ -36,7 +36,7 @@ export function Navbar() {
       }`}
     >
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center  justify-between h-16">
           {/* Left Navigation */}
           <div className="hidden md:flex space-x-8 text-sm">
             <Link href="/contact" className="hover:opacity-70 transition-opacity">
@@ -51,14 +51,14 @@ export function Navbar() {
           <div className="flex-1 md:flex-none text-center">
             <Link
               href="/"
-              className="text-3xl font-serif tracking-wider font-extrabold"
+              className="text-xl lg:text-3xl font-serif tracking-wider font-extrabold"
             >
               LUXE BLOOM
             </Link>
           </div>
 
           {/* Right Navigation */}
-          <div className="flex items-center space-x-6">
+          <div className="flex items-center ">
             <Link href="/wishlist" className="hover:opacity-70 transition-opacity">
               <Heart className="h-5 w-5" />
             </Link>
@@ -73,7 +73,7 @@ export function Navbar() {
                 <div className="flex justify-center mt-10">
                   <div>
                     {/* Modal Selection */}
-                    <div className="flex gap-14 mb-10">
+                    <div className="flex  gap-14 mb-10">
                       <button
                         onClick={() => setActiveModal('signIn')}
                         className={`text-sm text-[#000000]/70 font-normal uppercase tracking-[1.4px] ${
@@ -103,13 +103,8 @@ export function Navbar() {
               </SheetContent>
             </Sheet>
 
-            <Link
-              href="#"
-              className="flex items-center hover:opacity-70 transition-opacity"
-            >
+
               <CartSheet/>
-             
-            </Link>
           </div>
         </div>
 

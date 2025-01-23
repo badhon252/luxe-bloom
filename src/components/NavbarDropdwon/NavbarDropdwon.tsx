@@ -7,7 +7,7 @@ const NavbarDropdown = () => {
     <section className=" bg-white py-14">
       <div className="container ">
         <div className="flex gap-x-16 justify-center ">
-          <div className="w-[110px] h-[110px]  ">
+          <div className=" w-[110px] h-[110px]  ">
             <Image
               src={mini}
               alt="Rounded image"
