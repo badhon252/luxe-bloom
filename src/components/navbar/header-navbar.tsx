@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Heart, ShoppingCart, User } from 'lucide-react';
+import { Heart,  User } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import {
   HoverCard,
@@ -13,6 +13,7 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import SignIn from '../Account/SignIn';
 import CreateAccount from '../Account/CreateAccount';
 import SearchOption from './search';
+import { CartSheet } from '../cart/cart-sheet';
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -106,8 +107,8 @@ export function Navbar() {
               href="#"
               className="flex items-center hover:opacity-70 transition-opacity"
             >
-              <ShoppingCart className="h-5 w-5" />
-              <span className="ml-1 text-sm">2</span>
+              <CartSheet/>
+             
             </Link>
           </div>
         </div>
