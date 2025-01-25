@@ -1,5 +1,5 @@
 "use client";
-import {  useState } from "react";
+import { useState } from "react";
 import {
   Select,
   SelectContent,
@@ -14,6 +14,10 @@ import { PRODUCTS } from "../../../constants/products";
 import { Button } from "@/components/ui/button";
 
 
+
+
+
+
 const ITEMS_PER_PAGE = 6;
 
 export default function CollectionPage() {
@@ -21,6 +25,9 @@ export default function CollectionPage() {
   const [sort, setSort] = useState<SortOption>("featured");
   const [page, setPage] = useState(1);
 
+
+
+  
 
   // Filter products
   let filteredProducts = [...PRODUCTS];
