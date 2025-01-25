@@ -13,7 +13,7 @@ export default function page() {
       <ProductSlogan/>
       <ProductFaq/>
       <ProductshipmentExperiance/>
-      <AdoredCreations/>
+      <AdoredCreations/> 
       <ProductRemondations/>
       <ReviewsSection/>
     </div>

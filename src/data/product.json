@@ -1,0 +1,106 @@
+[
+  {
+      "offer": 0,
+      "averageRating": 0,
+      "reviewCount": 0,
+      "deletedAt": null,
+      "isDeleted": false,
+      "_id": "678e16a9396c86780fc5c0e8",
+      "name": "Amphora Porcelain Vase",
+      "details": "Inspired by the timeless elegance of ancient Mediterranean amphorae—those graceful, curved vessels that once held the finest wines, oils, and treasures—the Amphora is the Venus twist on the classic dozen roses. Complete with 12 long-stem Eternity® Roses—hand-selected and hand-picked by the botanical experts at partner farms in Ecuador. This gesture of love is timeless—and with our roses, a symbol of enduring love. ",
+      "description": "Flower count: 12 long-stem eternity® roses\nArrangement dimensions: 9.1 x 6.5 (inches)\n\nDisclaimer: Please note that our in-house floral designers skillfully hand-arrange every eternity arrangement. Subtle artistic variations may occur",
+      "image": [
+          {
+              "url": "/assets/1737365161195.jpg",
+              "color": "Red",
+              "_id": "678e16a9396c86780fc5c0e9"
+          }
+      ],
+      "productCategory": "678ddf8145559e8590769e72",
+      "productSubCategory": "678de755fb45750f6f282afc",
+      "quantity": 100,
+      "price": 100,
+      "__v": 0,
+      "createdAt": "2025-01-23T11:39:51.227Z",
+      "updatedAt": "2025-01-23T11:39:51.227Z"
+  },
+  {
+      "offer": 0,
+      "averageRating": 0,
+      "reviewCount": 0,
+      "deletedAt": null,
+      "isDeleted": false,
+      "_id": "678e16c6396c86780fc5c0eb",
+      "name": "Amphora Porcelain Vase",
+      "details": "Inspired by the timeless elegance of ancient Mediterranean amphorae—those graceful, curved vessels that once held the finest wines, oils, and treasures—the Amphora is the Venus twist on the classic dozen roses. Complete with 12 long-stem Eternity® Roses—hand-selected and hand-picked by the botanical experts at partner farms in Ecuador. This gesture of love is timeless—and with our roses, a symbol of enduring love. ",
+      "description": "Flower count: 12 long-stem eternity® roses\nArrangement dimensions: 9.1 x 6.5 (inches)\n\nDisclaimer: Please note that our in-house floral designers skillfully hand-arrange every eternity arrangement. Subtle artistic variations may occur",
+      "image": [
+          {
+              "url": "/assets/1737365190054.jpg",
+              "color": "Red",
+              "_id": "678e16c6396c86780fc5c0ec"
+          },
+          {
+              "url": "/assets/1737365190054.png",
+              "color": "Blue",
+              "_id": "678e16c6396c86780fc5c0ed"
+          }
+      ],
+      "productCategory": "678ddf8145559e8590769e72",
+      "productSubCategory": "678de755fb45750f6f282afc",
+      "quantity": 100,
+      "price": 100,
+      "__v": 0,
+      "createdAt": "2025-01-23T11:39:51.228Z",
+      "updatedAt": "2025-01-23T11:39:51.228Z"
+  },
+  {
+      "_id": "678f23a91e1e7ab6071f1455",
+      "name": "abc",
+      "details": "abcsderf",
+      "description": "abcd",
+      "image": [
+          {
+              "url": "/assets/1737434025714.png",
+              "color": "Red",
+              "_id": "678f23a91e1e7ab6071f1456"
+          },
+          {
+              "url": "/assets/1737434025714.png",
+              "color": "Blue",
+              "_id": "678f23a91e1e7ab6071f1457"
+          }
+      ],
+      "productCategory": "678f22381e1e7ab6071f1450",
+      "productSubCategory": "678f22881e1e7ab6071f1453",
+      "quantity": 10,
+      "price": 1000,
+      "offer": 0,
+      "averageRating": 0,
+      "reviewCount": 0,
+      "deletedAt": null,
+      "isDeleted": false,
+      "createdAt": "2025-01-21T04:33:45.717Z",
+      "updatedAt": "2025-01-21T04:33:45.717Z",
+      "__v": 0
+  },
+  {
+      "_id": "67907ca3df45de4efd37978f",
+      "name": "Large Square",
+      "details": "Our Signature White Large Square arrangement is comprised of 42-49 gorgeous eternity® roses set in a classic box inspired by a Parisian hat box. This signature arrangement will elevate any space with grace and majesty and is a luxurious gift for any occasion. You can personalize this arrangement with a lid message or you can customize further using our design your own arrangement feature.",
+      "description": "Flower Count: 42-49 Eternity® Roses\n\nBox Dimensions: 12 x 12 x 9 (inches)\n\nDisclaimer: Please note that variations will occur since all of our arrangements are uniquely handmade by our in-house designers.",
+      "image": [],
+      "productCategory": "678f22381e1e7ab6071f1450",
+      "productSubCategory": "678f22881e1e7ab6071f1453",
+      "quantity": 10,
+      "price": 1000,
+      "offer": 0,
+      "averageRating": 0,
+      "reviewCount": 0,
+      "deletedAt": null,
+      "isDeleted": false,
+      "createdAt": "2025-01-22T05:05:39.414Z",
+      "updatedAt": "2025-01-22T05:05:39.414Z",
+      "__v": 0
+  }
+]
