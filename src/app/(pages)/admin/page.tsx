@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 "use client"
 // Import necessary modules
-=======
-"use client"; // Import necessary modules
-
->>>>>>> 0b5e7056f10f24b2cb4feb5080305e6f9a19ca5a
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Eye, EyeOff } from "lucide-react";
