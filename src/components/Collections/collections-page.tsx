@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import {
   Select,
   SelectContent,
@@ -12,7 +12,7 @@ import { ProductCard } from "@/components/product/product-card";
 import { type FilterState, type SortOption } from "@/types/product";
 import { PRODUCTS } from "../../../constants/products";
 import { Button } from "@/components/ui/button";
-import axios from "axios";
+
 
 const ITEMS_PER_PAGE = 6;
 

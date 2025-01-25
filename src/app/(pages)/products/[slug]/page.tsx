@@ -8,7 +8,7 @@ import ProductshipmentExperiance from '@/components/product/ProductshipmentExper
 
 export default function page() {
   return (
-    <div>
+    <main>
       <ProductPage/>
       <ProductSlogan/>
       <ProductFaq/>
@@ -16,6 +16,6 @@ export default function page() {
       <AdoredCreations/> 
       <ProductRemondations/>
       <ReviewsSection/>
-    </div>
+    </main>
   )
 }
