@@ -1,3 +1,4 @@
+
 'use client';
 import React, { useState, ChangeEvent, FormEvent } from 'react';
 import { Card, CardContent } from "@/components/ui/card";
@@ -31,7 +32,7 @@ interface Errors {
   image?: string;
 }
 
-const ProductForm = () => {
+const AddProductfrom = () => {
   const [formData, setFormData] = useState<FormData>({
     name: '',
     details: '',
@@ -110,7 +111,7 @@ const ProductForm = () => {
   };
 
   return (
-    <Card className="   ">
+    <Card className="w-[70%]">
        <h1 className="text-2xl font-bold mb-4">Add product</h1>
       <CardContent>
         <form onSubmit={handleSubmit} className="space-y-6">
@@ -244,7 +245,7 @@ const ProductForm = () => {
             </div>
           </div>
 
-          <Button type="submit" className="w-full bg-blue-500 hover:bg-blue-600 text-white rounded-md py-4 mt-6">
+          <Button type="submit" className="w-[40%]  bg-blue-500 hover:bg-blue-600 text-white rounded-md py-5 mt-6">
             Submit
           </Button>
         </form>
@@ -253,4 +254,4 @@ const ProductForm = () => {
   );
 };
 
-export default ProductForm;
+export default AddProductfrom;
