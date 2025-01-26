@@ -2,13 +2,13 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { FileSignature, ShoppingBag, List,Package } from "lucide-react";
+import { ShoppingBag, List,Package } from "lucide-react";
 
 
 
 const sidebarItems = [
   { name: "Products", href: "dashboard/product", icon: ShoppingBag },
-  { name: "Add Product", href: "dashboard/add-product", icon: FileSignature },
+ 
   { name: "Categories", href: "/categories", icon: List },
   { name: "Orders", href: "/orders", icon: Package },
 ];
