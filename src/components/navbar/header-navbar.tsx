@@ -100,7 +100,9 @@ export function Navbar() {
 
         {/* Mobile Menu (for smaller screens) */}
         {mobileMenuOpen && (
-          <div className="md:hidden fixed inset-0 bg-white h-screen z-50 p-4 space-y-4 shadow-md rounded-md">
+       <div>
+         
+           <div className="md:hidden fixed inset-0 bg-white h-screen z-50 p-4 space-y-4 shadow-md rounded-md">
             <Link href="/contact" className="block text-lg text-gray-700 hover:bg-gray-100 p-2 rounded" onClick={closeMobileMenu}>CONTACT US</Link>
             <Link href="/boutiques" className="block text-lg text-gray-700 hover:bg-gray-100 p-2 rounded" onClick={closeMobileMenu}>BOUTIQUES</Link>
             <Link href="/collections" className="block text-lg text-gray-700 hover:bg-gray-100 p-2 rounded" onClick={closeMobileMenu}>FLOWERS</Link>
@@ -108,12 +110,13 @@ export function Navbar() {
             <Link href="/gifts" className="block text-lg text-gray-700 hover:bg-gray-100 p-2 rounded" onClick={closeMobileMenu}>GIFTS</Link>
             <Link href="/explore" className="block text-lg text-gray-700 hover:bg-gray-100 p-2 rounded" onClick={closeMobileMenu}>EXPLORE</Link>
             <div className="mt-4">
-              <button onClick={() => setMobileMenuOpen(false)} className="text-lg w-full text-center p-2 bg-gray-100 rounded">
+              <button onClick={() => setMobileMenuOpen(false)} className="text-lg w-full text-center p-2 bg-gray-300 rounded">
                 Close Menu
               </button>
             </div>
           </div>
-        )}
+       </div>
+        )} 
 
         {/* Secondary Navigation for Desktop */}
         <div className="hidden md:flex justify-center space-x-12 py-4 text-sm w-full">
